@@ -29,19 +29,38 @@ I use this space to document project progress, security-tool development, analys
 
 ## `┌─[ 01 ] whoami`
 
-<p align="center"><img src="./assets/terminal-boot.svg" width="100%" alt="XEBAC HAT terminal startup" /></p>
+<p align="center"><img src="./assets/terminal-boot.svg" width="100%" alt="XEBAC HAT futuristic AI cyberpunk identity terminal" /></p>
 
-I'm **Xebac Hat** — an independent security-focused builder interested in understanding how software and systems fail, validating security controls, and creating practical tools that improve security.
+<p align="center"><sub>◈ IDENTITY CORE: ONLINE · NEURAL LINK: STABLE · SECURITY MODE: AUTHORIZED RESEARCH ◈</sub></p>
 
-| Area | What I'm exploring |
-|---|---|
-| **Web & API security** | Attack-surface review, application security and secure testing |
-| **Red-team methodology** | Threat modeling, controlled security assessments and clear reporting |
-| **APK & file analysis** | Static inspection, suspicious-file triage and safe handling |
-| **Malware defense** | Detection concepts, quarantine workflows and defensive analysis |
-| **Security automation** | Repeatable Python and shell utilities for analysis and reporting |
+I'm **XEBAC HAT** — an independent security-focused builder exploring how software and systems fail, how security controls can be validated, and how practical AI-assisted tools can help make technology safer.
 
-> All security testing should be limited to systems you own or have explicit permission to assess.
+<table>
+  <tr>
+    <td width="50%" valign="top">
+
+**⌁ PRIMARY DIRECTIVES**
+
+- Web &amp; API security research
+- Authorized red-team methodology
+- Vulnerability analysis and validation
+- APK and suspicious-file triage
+
+</td>
+    <td width="50%" valign="top">
+
+**⌁ SYSTEM CAPABILITIES**
+
+- Python and shell automation
+- Defensive security tooling
+- Threat analysis and documentation
+- AI-assisted research workflows
+
+</td>
+  </tr>
+</table>
+
+<p align="center"><sub>[ ETHICAL BOUNDARY ] All testing is limited to systems I own or have explicit permission to assess.</sub></p>
 
 ## `┌─[ 02 ] arsenal & technology`
 
