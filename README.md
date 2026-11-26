@@ -114,7 +114,7 @@ Clear notes, reproducible findings, remediation guidance and responsible disclos
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=obunto-byte&bg_color=080808&color=eeeeee&line=ff4545&point=ffffff&area=true&area_color=7a1018&hide_border=true&custom_title=XEBAC%20HAT%20%7C%20CONTRIBUTION%20ACTIVITY" width="100%" alt="GitHub contribution activity graph" />
 </p>
 
-## `┌─[ 06 ] 3D contribution matrix`
+## `┌─[ 06 ] 3D Contribution Matrix`
 
 <p align="center">
   <img src="./profile-3d-contrib/profile-season-animate.svg" width="100%" alt="Animated 3D GitHub contribution matrix" />
