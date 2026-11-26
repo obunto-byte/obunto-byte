@@ -100,11 +100,7 @@ Clear notes, reproducible findings, remediation guidance and responsible disclos
 
 <p align="center"><img src="./generated/contribution-skyline.svg" width="100%" alt="Locally generated isometric contribution skyline; building height uses square-root scaling" /></p>
 
-## `┌─[ 06 ] 3D contribution matrix`
-
-<p align="center"><img src="./profile-3d-contrib/profile-season-animate.svg" width="100%" alt="Animated 3D GitHub contribution matrix" /></p>
-
-## `┌─[ 07 ] contribution snake`
+## `┌─[ 06 ] contribution snake`
 
 <p align="center">
   <picture>
@@ -114,7 +110,7 @@ Clear notes, reproducible findings, remediation guidance and responsible disclos
   </picture>
 </p>
 
-## `┌─[ 08 ] operating principles`
+## `┌─[ 07 ] operating principles`
 
 ```text
 01  Test only within an authorized scope.
@@ -125,7 +121,7 @@ Clear notes, reproducible findings, remediation guidance and responsible disclos
 06  Share knowledge responsibly.
 ```
 
-## `└─[ 09 ] connect`
+## `└─[ 08 ] connect`
 
 <p align="center"><a href="https://github.com/obunto-byte">GITHUB: obunto-byte</a> · <a href="https://github.com/obunto-byte?tab=repositories">REPOSITORIES</a></p>
 
