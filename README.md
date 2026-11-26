@@ -62,7 +62,7 @@ I'm **Xebac Hat** — a security-focused builder interested in understanding how
 ## 3D Contribution Matrix
 
 <p align="center">
-  <img src="./assets/xebac-hat-logo.jpg" width="360" alt="XEBAC HAT red skull logo" />
+  <img src="./assets/xebac-hat-logo.jpg" width="260" alt="XEBAC HAT red skull logo" />
 </p>
 
 <p align="center">
