@@ -1,8 +1,8 @@
 <!-- XEBAC HAT | Profile README | original red-team security theme -->
 
-<a href="https://github.com/obunto-byte">
-  <img src="./assets/matrix-banner.svg" alt="XEBAC HAT — Red Team and Security Research" width="100%" />
-</a>
+<p align="center">
+  <img src="./assets/aurora-veil.svg" alt="XEBAC HAT — Red Team, Ethical Hacking and Security Research" width="100%" />
+</p>
 
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=21&duration=2400&pause=850&color=FF4545&center=true&vCenter=true&width=900&lines=%3E+XEBAC+HAT+%7C+SECURITY+RESEARCH; %3E+RED+TEAM+METHODOLOGY+%26+ETHICAL+HACKING; %3E+SECURITY+AUTOMATION+%7C+DEFENSIVE+ENGINEERING; %3E+UNDERSTAND.+TEST.+SECURE." alt="Animated XEBAC HAT tagline" />
@@ -14,6 +14,28 @@
   <a href="https://github.com/obunto-byte?tab=repositories"><img src="https://img.shields.io/badge/FOCUS-RED%20TEAM%20%2B%20SECURITY-9b111e?style=for-the-badge&labelColor=080808" alt="Red team and security focus" /></a>
   <a href="https://github.com/obunto-byte/obunto-byte/actions/workflows/profile-visuals.yml"><img src="https://img.shields.io/badge/PROFILE%20VISUALS-AUTOMATED-292929?style=for-the-badge&logo=githubactions&logoColor=ff4545" alt="Automated profile visuals" /></a>
 </p>
+
+<table align="center" width="88%" border="0">
+  <tr>
+    <td valign="top" align="left" width="64%">
+
+### currently
+
+Exploring web and API security, red-team methodology, vulnerability analysis, and defensive automation. My focus is on authorized testing, careful validation, and practical security improvements.
+
+### writing
+
+I use this space to document project progress, security-tool development, analysis workflows, and lessons that can help make systems safer.
+
+    </td>
+    <td valign="top" align="right" width="36%">
+      <em>"Understand the system. Validate the risk. Strengthen the defense."</em><br>
+      <sub>— XEBAC HAT</sub><br><br>
+      <a href="https://github.com/obunto-byte">GitHub Profile</a><br>
+      <a href="https://github.com/obunto-byte?tab=repositories">Public Repositories</a>
+    </td>
+  </tr>
+</table>
 
 ---
 

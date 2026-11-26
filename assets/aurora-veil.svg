@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320">
+<defs>
+  <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#030406"/>
+    <stop offset=".48" stop-color="#100407"/>
+    <stop offset="1" stop-color="#030406"/>
+  </linearGradient>
+  <linearGradient id="veilRed" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#35050b" stop-opacity="0"/>
+    <stop offset=".23" stop-color="#8d1026" stop-opacity=".38"/>
+    <stop offset=".5" stop-color="#ff3656" stop-opacity=".78"/>
+    <stop offset=".76" stop-color="#74152b" stop-opacity=".38"/>
+    <stop offset="1" stop-color="#32050a" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="veilRose" x1="0" y1="1" x2="1" y2="0">
+    <stop offset="0" stop-color="#16050b" stop-opacity="0"/>
+    <stop offset=".48" stop-color="#d52d54" stop-opacity=".48"/>
+    <stop offset="1" stop-color="#4d1237" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="metal" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#a6a6a6"/>
+    <stop offset=".48" stop-color="#ffffff"/>
+    <stop offset="1" stop-color="#b4a0a4"/>
+  </linearGradient>
+  <radialGradient id="halo">
+    <stop offset="0" stop-color="#d71c43" stop-opacity=".24"/>
+    <stop offset=".65" stop-color="#690d20" stop-opacity=".08"/>
+    <stop offset="1" stop-color="#090406" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="blur30" x="-40%" y="-80%" width="180%" height="260%"><feGaussianBlur stdDeviation="24"/></filter>
+  <filter id="blur12" x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="12"/></filter>
+  <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+    <feGaussianBlur stdDeviation="3" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <pattern id="grid" width="38" height="38" patternUnits="userSpaceOnUse">
+    <path d="M38 0H0V38" fill="none" stroke="#e7aab6" stroke-opacity=".035" stroke-width="1"/>
+  </pattern>
+</defs>
+<rect width="1200" height="320" rx="14" fill="url(#base)"/>
+<rect width="1200" height="320" rx="14" fill="url(#grid)"/>
+<ellipse cx="600" cy="140" rx="600" ry="210" fill="url(#halo)"/>
+<g filter="url(#blur30)" opacity=".9">
+  <path d="M-80 205 C120 20 250 60 390 150 S650 285 820 125 S1080 10 1290 140 L1290 235 C1080 110 990 190 830 260 S545 330 360 210 S120 140 -80 285Z" fill="url(#veilRed)">
+    <animateTransform attributeName="transform" type="translate" values="-50 0;45 5;-50 0" dur="17s" repeatCount="indefinite"/>
+  </path>
+  <path d="M-80 180 C100 260 230 30 430 110 S720 240 900 110 S1110 65 1290 180 L1290 255 C1080 130 1020 210 870 250 S570 310 400 190 S120 110 -80 255Z" fill="url(#veilRose)" opacity=".8">
+    <animateTransform attributeName="transform" type="translate" values="30 4;-38 -2;30 4" dur="21s" repeatCount="indefinite"/>
+  </path>
+</g>
+<g fill="none" stroke-linecap="round">
+  <path d="M-30 215 C135 82 255 74 398 159 S657 279 823 151 S1070 51 1230 142" stroke="url(#veilRed)" stroke-width="18" opacity=".88" filter="url(#blur12)">
+    <animate attributeName="d" dur="14s" repeatCount="indefinite" values="M-30 215 C135 82 255 74 398 159 S657 279 823 151 S1070 51 1230 142;M-30 172 C135 36 255 129 398 191 S657 223 823 116 S1070 112 1230 190;M-30 215 C135 82 255 74 398 159 S657 279 823 151 S1070 51 1230 142"/>
+  </path>
+  <path d="M-20 244 C140 125 270 112 430 190 S710 290 870 168 S1090 94 1220 176" stroke="#f13d61" stroke-width="2" opacity=".55" filter="url(#glow)">
+    <animate attributeName="opacity" values=".18;.72;.18" dur="9s" repeatCount="indefinite"/>
+  </path>
+  <path d="M20 80 C190 162 300 20 470 66 S730 156 900 53 S1080 27 1190 92" stroke="#a12c50" stroke-width="1.5" opacity=".38">
+    <animate attributeName="opacity" values=".12;.55;.12" dur="11s" repeatCount="indefinite"/>
+  </path>
+</g>
+<g fill="#ffc2ce">
+  <circle cx="150" cy="84" r="1.4" opacity=".7"><animate attributeName="opacity" values=".2;1;.2" dur="5s" repeatCount="indefinite"/></circle>
+  <circle cx="284" cy="46" r="1" opacity=".5"/>
+  <circle cx="412" cy="244" r="1.2" opacity=".6"/>
+  <circle cx="760" cy="64" r="1.3" opacity=".6"/>
+  <circle cx="936" cy="231" r="1.2" opacity=".7"/>
+  <circle cx="1084" cy="94" r="1" opacity=".55"/>
+  <circle cx="1022" cy="270" r="1.4" opacity=".5"/>
+  <circle cx="190" cy="260" r="1" opacity=".6"/>
+</g>
+<path d="M60 270H1140" stroke="#9e1b36" stroke-opacity=".5"/>
+<path d="M60 274H1140" stroke="#ff4967" stroke-opacity=".13"/>
+<g text-anchor="middle" font-family="Arial,Helvetica,sans-serif">
+  <text x="600" y="122" fill="#f7b8c5" font-size="15" letter-spacing="9" opacity=".95">SECURITY RESEARCH  /  AUTHORIZED TESTING</text>
+  <text x="600" y="190" fill="url(#metal)" font-size="66" font-weight="900" letter-spacing="10" filter="url(#glow)">XEBAC HAT</text>
+  <text x="600" y="224" fill="#f1dce1" font-size="16" letter-spacing="5">RED TEAM  •  ETHICAL HACKING  •  DEFENSIVE ENGINEERING</text>
+</g>
+<path d="M435 245H765" stroke="#d42a4c" stroke-width="2" filter="url(#glow)"/>
+<circle cx="435" cy="245" r="3" fill="#ff526d"/><circle cx="765" cy="245" r="3" fill="#ff526d"/>
+<rect x="1" y="1" width="1198" height="318" rx="14" fill="none" stroke="#7b1c32" stroke-opacity=".42"/>
+</svg>
