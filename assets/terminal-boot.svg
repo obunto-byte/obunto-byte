@@ -1,22 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="300" viewBox="0 0 1100 300">
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="360" viewBox="0 0 1100 360" role="img" aria-labelledby="title desc">
+<title id="title">XEBAC HAT neural identity terminal</title>
+<desc id="desc">A futuristic dark cyberpunk terminal with neon cyan, violet and magenta neural network accents, animated boot lines and scanline effect.</desc>
 <defs>
- <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#101010"/><stop offset="1" stop-color="#050505"/></linearGradient>
- <filter id="g" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="1.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#080b1b"/><stop offset=".55" stop-color="#11102b"/><stop offset="1" stop-color="#210b2c"/></linearGradient>
+  <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#00f5ff"/><stop offset=".52" stop-color="#8b5cf6"/><stop offset="1" stop-color="#ff3cac"/></linearGradient>
+  <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#00f5ff"/><stop offset="1" stop-color="#d946ef"/></linearGradient>
+  <filter id="neon" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#59618f" stroke-opacity=".16" stroke-width="1"/></pattern>
+  <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M0 0H4" stroke="#b8f7ff" stroke-opacity=".055"/></pattern>
 </defs>
-<rect x="5" y="5" width="1090" height="290" rx="14" fill="url(#panel)" stroke="#a5121b" stroke-width="2"/>
-<rect x="5" y="5" width="1090" height="38" rx="14" fill="#171111"/>
-<path d="M5 30H1095V43H5Z" fill="#171111"/>
-<circle cx="30" cy="24" r="6" fill="#ff5f56"/><circle cx="52" cy="24" r="6" fill="#ffbd2e"/><circle cx="74" cy="24" r="6" fill="#27c93f"/>
-<text x="550" y="29" text-anchor="middle" fill="#d7a6a6" font-family="monospace" font-size="13" letter-spacing="3">XEBAC-HAT :: TERMINAL SESSION</text>
-<g font-family="monospace" font-size="17">
- <text x="35" y="75" fill="#ff5555">┌──[ obunto-byte@xebac ]──[ ~/security-lab ]</text>
- <text x="35" y="101" fill="#ffffff">└─$ ./profile --initialize</text>
- <text x="35" y="137" fill="#ff4444" opacity="0">[ OK ] identity loaded : XEBAC HAT <animate attributeName="opacity" from="0" to="1" begin=".4s" dur=".1s" fill="freeze"/></text>
- <text x="35" y="161" fill="#ff7777" opacity="0">[ OK ] focus           : security research &amp; red-team methodology <animate attributeName="opacity" from="0" to="1" begin=".9s" dur=".1s" fill="freeze"/></text>
- <text x="35" y="185" fill="#ff7777" opacity="0">[ OK ] workbench       : analysis, automation &amp; defensive tooling <animate attributeName="opacity" from="0" to="1" begin="1.4s" dur=".1s" fill="freeze"/></text>
- <text x="35" y="209" fill="#d0d0d0" opacity="0">[ NOTE ] scope          : only systems you own or are authorized to test <animate attributeName="opacity" from="0" to="1" begin="1.9s" dur=".1s" fill="freeze"/></text>
- <text x="35" y="248" fill="#ffffff" opacity="0">$ echo "understand • test • secure" <animate attributeName="opacity" from="0" to="1" begin="2.4s" dur=".1s" fill="freeze"/></text>
- <text x="35" y="273" fill="#ff4444" filter="url(#g)" opacity="0">[ SESSION READY ] <animate attributeName="opacity" from="0" to="1" begin="2.9s" dur=".1s" fill="freeze"/></text>
+<rect x="5" y="5" width="1090" height="350" rx="18" fill="url(#bg)" stroke="url(#edge)" stroke-width="2"/>
+<rect x="7" y="7" width="1086" height="346" rx="16" fill="url(#grid)"/>
+<rect x="7" y="7" width="1086" height="346" rx="16" fill="url(#scan)"/>
+<path d="M5 48H1095" stroke="url(#edge)" stroke-width="1.5" opacity=".8"/>
+<circle cx="32" cy="27" r="6" fill="#ff4d9d"/><circle cx="53" cy="27" r="6" fill="#fbbf24"/><circle cx="74" cy="27" r="6" fill="#00f5ff"/>
+<text x="550" y="32" text-anchor="middle" fill="#a5b4fc" font-family="monospace" font-size="13" letter-spacing="4">XEBAC HAT // NEURAL INTERFACE v2.6</text>
+<g font-family="monospace">
+  <text x="38" y="83" fill="#00f5ff" font-size="17" filter="url(#neon)">root@xebac-neural:~/identity-core# <tspan fill="#f8fafc">initialize --profile</tspan></text>
+  <text x="38" y="119" fill="#a78bfa" font-size="16" opacity="0">[ CORE ] identity signature verified <animate attributeName="opacity" values="0;1" begin=".35s" dur=".2s" fill="freeze"/></text>
+  <text x="38" y="151" fill="#00f5ff" font-size="16" opacity="0">[ LINK ] neural interface connected <animate attributeName="opacity" values="0;1" begin=".75s" dur=".2s" fill="freeze"/></text>
+  <text x="38" y="183" fill="#f472b6" font-size="16" opacity="0">[ MODE ] security research // red-team methodology <animate attributeName="opacity" values="0;1" begin="1.15s" dur=".2s" fill="freeze"/></text>
+  <text x="38" y="215" fill="#a5b4fc" font-size="16" opacity="0">[ TOOLS ] analysis · automation · defensive engineering <animate attributeName="opacity" values="0;1" begin="1.55s" dur=".2s" fill="freeze"/></text>
+  <text x="38" y="247" fill="#a5b4fc" font-size="16" opacity="0">[ AI LINK ] research assistance // human-verified results <animate attributeName="opacity" values="0;1" begin="1.95s" dur=".2s" fill="freeze"/></text>
+  <text x="38" y="295" fill="#f8fafc" font-size="18" opacity="0">XEBAC HAT <tspan fill="#00f5ff" filter="url(#neon)"> // SYSTEM ONLINE</tspan><animate attributeName="opacity" values="0;1" begin="2.35s" dur=".25s" fill="freeze"/></text>
+  <text x="38" y="326" fill="#64748b" font-size="12" letter-spacing="2">UNDERSTAND THE SYSTEM · VALIDATE THE RISK · STRENGTHEN THE DEFENSE</text>
 </g>
-<rect x="225" y="259" width="9" height="15" fill="#ff3333" opacity="0"><animate attributeName="opacity" values="0;1;0;1" dur="1s" begin="3s" repeatCount="indefinite"/></rect>
+<g fill="none" stroke="url(#edge)" stroke-width="1.5" opacity=".8">
+ <path d="M855 100L920 135L985 100L1040 135M920 135V205L985 240L1040 205M985 100V240"/>
+ <path d="M855 100L855 170L920 205L985 170L1040 205"/>
+</g>
+<g fill="#00f5ff" filter="url(#neon)">
+ <circle cx="855" cy="100" r="4"/><circle cx="920" cy="135" r="5"/><circle cx="985" cy="100" r="4"/><circle cx="1040" cy="135" r="4"/><circle cx="920" cy="205" r="4"/><circle cx="985" cy="240" r="5"/><circle cx="1040" cy="205" r="4"/>
+</g>
+<rect x="38" y="335" width="1024" height="2" fill="url(#edge)" opacity=".7"/>
+<rect x="38" y="335" width="220" height="2" fill="#00f5ff"><animate attributeName="width" values="0;1024;220" dur="5s" repeatCount="indefinite"/></rect>
 </svg>
