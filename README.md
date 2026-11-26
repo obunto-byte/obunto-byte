@@ -100,15 +100,17 @@ Clear notes, reproducible findings, remediation guidance and responsible disclos
 
 <p align="center"><img src="./generated/contribution-skyline.svg" width="100%" alt="Locally generated isometric contribution skyline; building height uses square-root scaling" /></p>
 
-## `┌─[ 06 ] contribution snake`
+## `┌─[ 06 ] neural activity // contribution snake`
 
+<p align="center"><sub>◈ NEURAL NETWORK TRACE · CONTRIBUTION SIGNALS · CYBERPUNK MODE ◈</sub></p>
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./dist/github-snake-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="./dist/github-snake.svg" />
-    <img src="./dist/github-snake-dark.svg" width="100%" alt="Animated GitHub contribution snake" />
+    <img src="./dist/github-snake-dark.svg" width="100%" alt="Neon cyan cyberpunk contribution snake over a dark violet and magenta activity grid" />
   </picture>
 </p>
+<p align="center"><sub>[ SYSTEM STATUS: TRACKING ] — [ SIGNAL: CONTRIBUTION ACTIVITY ] — [ THEME: NEON CYBERNETIC ]</sub></p>
 
 ## `┌─[ 07 ] operating principles`
 
