@@ -59,7 +59,7 @@ I'm **Xebac Hat** — a security-focused builder interested in understanding how
   <img src="https://streak-stats.demolab.com?user=obunto-byte&theme=dark&hide_border=true&background=0D1117&ring=FF4242&fire=FF4242&currStreakLabel=FF4242" alt="GitHub contribution streak" />
 </p>
 
-## 3D contribution matrix
+## 3D Contribution Matrix
 
 <p align="center">
   <img src="profile-3d-contrib/profile-season-animate.svg" width="100%" alt="Animated 3D GitHub contribution calendar" />
