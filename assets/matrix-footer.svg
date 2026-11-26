@@ -1,9 +1,61 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="120" viewBox="0 0 1200 120">
-<defs><linearGradient id="f" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#350000"/><stop offset=".5" stop-color="#e21b2d"/><stop offset="1" stop-color="#350000"/></linearGradient></defs>
-<rect width="1200" height="120" rx="8" fill="#050505"/>
-<path d="M0 18H1200M0 24H1200" stroke="#6b0909" stroke-opacity=".8"/>
-<path d="M130 47H1070" stroke="url(#f)" stroke-width="2"/>
-<text x="600" y="78" text-anchor="middle" fill="#eeeeee" font-family="monospace" font-size="20" letter-spacing="6">XEBAC HAT  //  END OF TRANSMISSION</text>
-<text x="600" y="101" text-anchor="middle" fill="#b84c53" font-family="monospace" font-size="11" letter-spacing="3">RESPONSIBLE RESEARCH • DEFENSE • CONTINUOUS LEARNING</text>
-<path d="M0 112H1200" stroke="#6b0909" stroke-width="4"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="160" viewBox="0 0 1200 160" role="img" aria-labelledby="title desc">
+<title id="title">XEBAC HAT — End of Transmission</title>
+<desc id="desc">Cyberpunk footer banner with a hooded neon-blue operator, a violet cybernetic shadow emblem, and cyan-purple transmission graphics.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#050916"/><stop offset=".55" stop-color="#0b1024"/><stop offset="1" stop-color="#160b25"/></linearGradient>
+  <linearGradient id="neon" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#00f5ff"/><stop offset=".48" stop-color="#7c3aed"/><stop offset="1" stop-color="#ff36b7"/></linearGradient>
+  <linearGradient id="titleGrad" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#67f7ff"/><stop offset=".53" stop-color="#d8d7ff"/><stop offset="1" stop-color="#e879f9"/></linearGradient>
+  <radialGradient id="halo"><stop stop-color="#00cfff" stop-opacity=".28"/><stop offset="1" stop-color="#00cfff" stop-opacity="0"/></radialGradient>
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="soft" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="12"/></filter>
+  <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#6276a8" stroke-opacity=".12" stroke-width=".7"/></pattern>
+  <clipPath id="clip"><rect width="1200" height="160" rx="9"/></clipPath>
+</defs>
+<g clip-path="url(#clip)">
+  <rect width="1200" height="160" fill="url(#bg)"/>
+  <rect width="1200" height="160" fill="url(#grid)"/>
+  <ellipse cx="90" cy="80" rx="125" ry="105" fill="url(#halo)"/>
+  <ellipse cx="1110" cy="80" rx="125" ry="105" fill="#a21caf" opacity=".14" filter="url(#soft)"/>
+  <path d="M0 14H1200M0 19H1200M0 145H1200" stroke="url(#neon)" stroke-width="1.4" opacity=".72"/>
+  <path d="M0 25H1200M0 136H1200" stroke="#00d9ff" stroke-opacity=".25"/>
+  <path d="M0 34H190L215 56H985L1010 34H1200M0 126H190L215 104H985L1010 126H1200" fill="none" stroke="url(#neon)" stroke-width="2" opacity=".85"/>
+  <path d="M205 48H995M205 112H995" stroke="#00eaff" stroke-width="1" opacity=".28"/>
+  <!-- left neural HUD and hooded operator -->
+  <g fill="none" stroke="#00eaff" filter="url(#glow)" opacity=".82">
+    <circle cx="88" cy="80" r="57" stroke-width="1.2" stroke-dasharray="3 5"/>
+    <circle cx="88" cy="80" r="47" stroke-width=".8" opacity=".55"/>
+    <path d="M88 16V29M88 131V144M24 80H38M138 80H152M42 34L51 43M125 117L134 126"/>
+  </g>
+  <path d="M28 160C31 124 38 91 51 65C61 44 76 31 94 28C113 36 129 56 137 83L153 160Z" fill="#071021" stroke="#087fbb" stroke-width="1.8"/>
+  <path d="M54 84C57 59 72 43 94 38C109 47 120 64 123 86L105 102L88 116L68 106Z" fill="#030712" stroke="#00d9ff" stroke-opacity=".76" stroke-width="1.3"/>
+  <path d="M75 74L101 66L112 92L94 109L73 96Z" fill="#10253c" stroke="#35eaff" stroke-opacity=".62"/>
+  <path d="M83 88L100 83" stroke="#00f5ff" stroke-width="2" filter="url(#glow)"/>
+  <path d="M18 137L54 118L70 160M148 133L123 119L112 160" fill="none" stroke="#7c3aed" stroke-width="3" opacity=".8"/>
+  <!-- right cyber-shadow sigil -->
+  <g transform="translate(1112 80)" filter="url(#glow)">
+    <circle r="57" fill="none" stroke="#a855f7" stroke-width="1.2" stroke-dasharray="2 5"/>
+    <circle r="46" fill="none" stroke="#00eaff" stroke-opacity=".65"/>
+    <path d="M-38 -12L-48 -43L-16 -27L0 -39L16 -27L48 -43L38 -12L31 20L0 45L-31 20Z" fill="#100c2b" stroke="url(#neon)" stroke-width="2.3"/>
+    <path d="M-27 -9L-11 -2L-19 10L-34 7ZM27 -9L11 -2L19 10L34 7Z" fill="#00eaff" opacity=".9"/>
+    <path d="M-12 20L0 13L12 20L0 32Z" fill="#a855f7"/>
+    <path d="M-16 -26L-22 -48M16 -26L22 -48" stroke="#00eaff" stroke-width="2"/>
+  </g>
+  <!-- signal rails -->
+  <g fill="none" stroke="url(#neon)" stroke-width="2" opacity=".92">
+    <path d="M170 43H202L218 58H248M952 58H982L998 43H1030"/>
+    <path d="M170 117H202L218 102H248M952 102H982L998 117H1030"/>
+  </g>
+  <g fill="#00eaff" opacity=".85">
+    <path d="M260 39h28v3h-28zM300 39h9v3h-9zM911 118h28v3h-28zM948 118h9v3h-9z"/>
+  </g>
+  <text x="600" y="76" text-anchor="middle" fill="url(#titleGrad)" font-family="monospace" font-size="25" font-weight="700" letter-spacing="5" filter="url(#glow)">XEBAC HAT <tspan fill="#00f5ff">//</tspan> END OF TRANSMISSION</text>
+  <text x="600" y="101" text-anchor="middle" fill="#a5ecff" font-family="monospace" font-size="11" letter-spacing="3.4">RESPONSIBLE RESEARCH  •  DEFENSE  •  CONTINUOUS LEARNING</text>
+  <path d="M250 116H950" stroke="url(#neon)" stroke-width="1.2" opacity=".7"/>
+  <path d="M250 116H420" stroke="#00f5ff" stroke-width="2" filter="url(#glow)">
+    <animate attributeName="opacity" values=".35;1;.35" dur="3.2s" repeatCount="indefinite"/>
+  </path>
+  <path d="M0 152H1200" stroke="url(#neon)" stroke-width="4"/>
+  <rect x="0" y="0" width="1200" height="160" rx="9" fill="none" stroke="url(#neon)" stroke-width="1.5"/>
+  <path d="M0 0H1200" stroke="#ff36b7" stroke-opacity=".25"/>
+</g>
 </svg>
