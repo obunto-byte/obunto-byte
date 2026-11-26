@@ -1,8 +1,6 @@
 <!-- XEBAC HAT | Profile README | local Tokyo Night security theme -->
 <p align="center"><img src="./assets/terminal-header.svg" alt="XEBAC HAT cyberpunk terminal header" width="100%" /></p>
-<a id="neural-shadow-realm"></a>
-<p align="center"><img src="./xebac-anime-awakening.gif" alt="XEBAC HAT animated anime shadow realm with looping blue energy, shadow effects and cinematic cyberpunk atmosphere" width="100%" /></p>
-<p align="center"><sub>◈ NEURAL SHADOW REALM · LIVE ENERGY TRACE · CYBERPUNK 2.5D PARALLAX ◈</sub></p>
+
 <p align="center">XEBAC HAT · RED TEAM METHODOLOGY · SECURITY RESEARCH · DEFENSIVE ENGINEERING</p>
 <p align="center"><a href="https://github.com/obunto-byte">GitHub Profile</a> · <a href="https://github.com/obunto-byte?tab=repositories">Public Repositories</a> · <a href="https://github.com/obunto-byte/obunto-byte/actions">Profile Automation</a></p>
 
