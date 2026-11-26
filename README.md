@@ -5,10 +5,6 @@
 </a>
 
 <p align="center">
-  <img src="./assets/xebac-hat-logo.jpg" width="230" alt="XEBAC HAT red skull emblem" />
-</p>
-
-<p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=21&duration=2400&pause=850&color=FF4545&center=true&vCenter=true&width=900&lines=%3E+XEBAC+HAT+%7C+SECURITY+RESEARCH; %3E+RED+TEAM+METHODOLOGY+%26+ETHICAL+HACKING; %3E+SECURITY+AUTOMATION+%7C+DEFENSIVE+ENGINEERING; %3E+UNDERSTAND.+TEST.+SECURE." alt="Animated XEBAC HAT tagline" />
 </p>
 
