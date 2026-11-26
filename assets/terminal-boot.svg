@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="300" viewBox="0 0 1100 300">
+<defs>
+ <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#101010"/><stop offset="1" stop-color="#050505"/></linearGradient>
+ <filter id="g" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="1.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect x="5" y="5" width="1090" height="290" rx="14" fill="url(#panel)" stroke="#a5121b" stroke-width="2"/>
+<rect x="5" y="5" width="1090" height="38" rx="14" fill="#171111"/>
+<path d="M5 30H1095V43H5Z" fill="#171111"/>
+<circle cx="30" cy="24" r="6" fill="#ff5f56"/><circle cx="52" cy="24" r="6" fill="#ffbd2e"/><circle cx="74" cy="24" r="6" fill="#27c93f"/>
+<text x="550" y="29" text-anchor="middle" fill="#d7a6a6" font-family="monospace" font-size="13" letter-spacing="3">XEBAC-HAT :: TERMINAL SESSION</text>
+<g font-family="monospace" font-size="17">
+ <text x="35" y="75" fill="#ff5555">┌──[ obunto-byte@xebac ]──[ ~/security-lab ]</text>
+ <text x="35" y="101" fill="#ffffff">└─$ ./profile --initialize</text>
+ <text x="35" y="137" fill="#ff4444" opacity="0">[ OK ] identity loaded : XEBAC HAT <animate attributeName="opacity" from="0" to="1" begin=".4s" dur=".1s" fill="freeze"/></text>
+ <text x="35" y="161" fill="#ff7777" opacity="0">[ OK ] focus           : security research &amp; red-team methodology <animate attributeName="opacity" from="0" to="1" begin=".9s" dur=".1s" fill="freeze"/></text>
+ <text x="35" y="185" fill="#ff7777" opacity="0">[ OK ] workbench       : analysis, automation &amp; defensive tooling <animate attributeName="opacity" from="0" to="1" begin="1.4s" dur=".1s" fill="freeze"/></text>
+ <text x="35" y="209" fill="#d0d0d0" opacity="0">[ NOTE ] scope          : only systems you own or are authorized to test <animate attributeName="opacity" from="0" to="1" begin="1.9s" dur=".1s" fill="freeze"/></text>
+ <text x="35" y="248" fill="#ffffff" opacity="0">$ echo "understand • test • secure" <animate attributeName="opacity" from="0" to="1" begin="2.4s" dur=".1s" fill="freeze"/></text>
+ <text x="35" y="273" fill="#ff4444" filter="url(#g)" opacity="0">[ SESSION READY ] <animate attributeName="opacity" from="0" to="1" begin="2.9s" dur=".1s" fill="freeze"/></text>
+</g>
+<rect x="225" y="259" width="9" height="15" fill="#ff3333" opacity="0"><animate attributeName="opacity" values="0;1;0;1" dur="1s" begin="3s" repeatCount="indefinite"/></rect>
+</svg>
