@@ -84,6 +84,20 @@ A Python-based web security utility documented for educational use and authorize
   <a href="https://github.com/obunto-byte?tab=repositories"><img src="https://img.shields.io/badge/ALL_REPOSITORIES-FF3CAC?style=for-the-badge&logo=github&logoColor=FF3CAC&labelColor=0B1020" alt="All public repositories" /></a>
 </p>
 
+### XEBAC HAT — AI-IDS v2
+
+A Windows-first defensive intrusion-detection and monitoring prototype built with FastAPI and SQLite. It correlates application events into sessions, applies explainable behavioural rules, stores incidents, and displays investigation details in a dark SOC dashboard. Optional agents report Windows host-health and passive packet-header metadata. Offline IsolationForest training is included as an experiment; live detection remains rule-based.
+
+- **Purpose:** monitor your own applications and authorized labs, recognize unusual session behaviour, and investigate explainable alerts.
+- **Detection:** authentication failures, device/token/source changes, broad path/object access, privilege changes, and high request volume.
+- **Operations:** admin/analyst/viewer roles, event history, sessions, incidents, and synthetic demo data.
+- **Run:** extract the source package, double-click `run_windows.bat`, configure the first admin account, and open `http://127.0.0.1:8001`.
+- **Security note:** this is a local prototype. `POST /api/events` is unauthenticated for local agent intake; do not expose it remotely without adding agent authentication, TLS, rate limits, and network controls.
+
+<a href="https://github.com/obunto-byte/obunto-byte/tree/main/projects/XEBAC_HAT_AI_IDS_V2"><img src="https://img.shields.io/badge/PROJECT-DOCUMENTATION-00F5FF?style=for-the-badge&logo=readthedocs&logoColor=00F5FF&labelColor=0B1020" alt="Project documentation" /></a>
+
+---
+
 ## 03 / Current build tracks
 
 <table>
