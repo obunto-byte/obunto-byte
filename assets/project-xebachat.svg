@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="260" viewBox="0 0 900 260">
+<defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#0b1020"/><stop offset="1" stop-color="#101d32"/></linearGradient><linearGradient id="a"><stop stop-color="#00f5ff"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs>
+<rect width="900" height="260" rx="22" fill="url(#g)" stroke="#8b5cf6" stroke-opacity=".8" stroke-width="2"/>
+<path d="M28 44H872M28 216H872" stroke="#8b5cf6" stroke-opacity=".25"/>
+<rect x="42" y="58" width="40" height="34" rx="5" fill="none" stroke="#00f5ff" stroke-width="3"/><path d="M48 70h28M48 80h18" stroke="#ff3158" stroke-width="3"/>
+<text x="102" y="83" fill="#f5f7ff" font-family="monospace" font-size="38" font-weight="700">xebachat v1.2</text>
+<text x="42" y="137" fill="#00f5ff" font-family="monospace" font-size="19">ENDPOINT &amp; PARAMETER DISCOVERY</text>
+<text x="42" y="174" fill="#cbd5e1" font-family="monospace" font-size="16">Python · Bounded crawling · Deduplication · Structured output</text>
+<text x="42" y="238" fill="#8b5cf6" font-family="monospace" font-size="14">AUTHORIZED ASSESSMENTS ONLY</text>
+</svg>
