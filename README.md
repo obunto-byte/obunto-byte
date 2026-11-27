@@ -1,152 +1,159 @@
-<!-- XEBAC HAT | Profile README | local Tokyo Night security theme -->
-<p align="center"><img src="./assets/terminal-header.svg" alt="XEBAC HAT cyberpunk terminal header" width="100%" /></p>
+<!-- XEBAC HAT | Cyberpunk profile README -->
+<div align="center">
+  <a href="https://github.com/obunto-byte">
+    <img src="./assets/terminal-header.svg" width="100%" alt="XEBAC HAT neon cyberpunk terminal banner" />
+  </a>
 
-<p align="center">XEBAC HAT · RED TEAM METHODOLOGY · SECURITY RESEARCH · DEFENSIVE ENGINEERING</p>
-<p align="center"><a href="https://github.com/obunto-byte">GitHub Profile</a> · <a href="https://github.com/obunto-byte?tab=repositories">Public Repositories</a> · <a href="https://github.com/obunto-byte/obunto-byte/actions">Profile Automation</a></p>
+  <p>
+    <strong>DEFENSIVE SECURITY</strong> &nbsp;·&nbsp;
+    <strong>PYTHON AUTOMATION</strong> &nbsp;·&nbsp;
+    <strong>SYSTEMS RESEARCH</strong>
+  </p>
 
-<table align="center" width="88%" border="0">
-  <tr>
-    <td valign="top" align="left" width="64%">
+  <p>
+    <a href="https://github.com/obunto-byte?tab=repositories"><img src="https://img.shields.io/badge/REPOSITORIES-EXPLORE-00F5FF?style=for-the-badge&labelColor=0B1020" alt="Explore repositories" /></a>
+    <a href="https://github.com/obunto-byte/obunto-byte"><img src="https://img.shields.io/badge/PROFILE-README-FF3CAC?style=for-the-badge&labelColor=0B1020" alt="Profile README" /></a>
+  </p>
 
-### currently
+  <p>
+    <img src="https://img.shields.io/github/followers/obunto-byte?style=flat-square&label=FOLLOWERS&color=00F5FF&labelColor=0B1020" alt="GitHub followers" />
+    <img src="https://img.shields.io/github/stars/obunto-byte?style=flat-square&label=STARS&color=FF3CAC&labelColor=0B1020" alt="GitHub stars" />
+    <img src="https://komarev.com/ghpvc/?username=obunto-byte&label=PROFILE+VIEWS&color=8B5CF6&style=flat-square" alt="Profile views" />
+  </p>
 
-Exploring web and API security, red-team methodology, vulnerability analysis, and defensive automation. My focus is on authorized testing, careful validation, and practical security improvements.
-
-### writing
-
-I use this space to document project progress, security-tool development, analysis workflows, and lessons that can help make systems safer.
-
-    </td>
-    <td valign="top" align="right" width="36%">
-      <em>“Understand the system. Validate the risk. Strengthen the defense.”</em><br>
-      <sub>— XEBAC HAT</sub><br><br>
-      <a href="https://github.com/obunto-byte">GitHub Profile</a><br>
-      <a href="https://github.com/obunto-byte?tab=repositories">Public Repositories</a>
-    </td>
-  </tr>
-</table>
+  <sub>◈ SYSTEM STATUS: ONLINE &nbsp;·&nbsp; SECURITY MODE: AUTHORIZED RESEARCH &nbsp;·&nbsp; THEME: NEON CYBERPUNK ◈</sub>
+</div>
 
 ---
 
-## `┌─[ 01 ] whoami`
+## `01 // IDENTITY CORE`
 
-<p align="center"><img src="./assets/terminal-boot.svg" width="100%" alt="XEBAC HAT futuristic AI cyberpunk identity terminal" /></p>
+<table>
+  <tr>
+    <td width="58%" valign="top">
+      <strong>$ whoami</strong>
 
-<p align="center"><sub>◈ IDENTITY CORE: ONLINE · NEURAL LINK: STABLE · SECURITY MODE: AUTHORIZED RESEARCH ◈</sub></p>
+      I'm **XEBAC HAT** — an independent builder focused on defensive security, web and API security concepts, Python automation, and practical tools that make systems easier to understand and protect.
 
-I'm **XEBAC HAT** — an independent security-focused builder exploring how software and systems fail, how security controls can be validated, and how practical AI-assisted tools can help make technology safer.
+      I enjoy exploring how applications work, validating security controls in authorized environments, and turning technical findings into clear, useful improvements.
+
+      **CURRENT TRANSMISSION**
+      - Building and refining the XEBAC HAT security-tool ecosystem
+      - Exploring web application and API security
+      - Developing Python utilities and repeatable workflows
+      - Documenting findings, limitations, and defensive improvements
+    </td>
+    <td width="42%" valign="top" align="center">
+      <img src="./assets/terminal-boot.svg" width="100%" alt="XEBAC HAT neon neural security terminal" />
+    </td>
+  </tr>
+</table>
+
+> **Operating philosophy:** Understand the system. Validate the risk. Strengthen the defense.
+
+## `02 // FEATURED BUILD`
+
+<table>
+  <tr>
+    <td width="68%" valign="top">
+      <h3>◈ XEBAC HAT — Web Security Auditor</h3>
+      A Python-based utility documented for educational use and authorized web security testing.
+
+      **Documented capabilities**
+      - Checks common administrative paths
+      - Looks for publicly exposed backup-file paths
+      - Uses concurrent checks for faster discovery
+      - Produces JSON and TXT reports
+
+      <a href="https://github.com/obunto-byte/admin-panle-finder-"><img src="https://img.shields.io/badge/OPEN_PROJECT-00F5FF?style=for-the-badge&logo=github&logoColor=0B1020&labelColor=0B1020" alt="Open XEBAC HAT Web Security Auditor repository" /></a>
+    </td>
+    <td width="32%" valign="middle" align="center">
+      <img src="./assets/aurora-veil.svg" width="100%" alt="Neon cyberpunk visual panel" />
+      <sub>PROJECT SIGNAL // ACTIVE</sub>
+    </td>
+  </tr>
+</table>
+
+<p align="center">
+  <a href="https://github.com/obunto-byte?tab=repositories">⌁ Browse all public repositories →</a>
+</p>
+
+## `03 // RESEARCH DIRECTIVES`
 
 <table>
   <tr>
     <td width="50%" valign="top">
-
-**⌁ PRIMARY DIRECTIVES**
-
-- Web &amp; API security research
-- Authorized red-team methodology
-- Vulnerability analysis and validation
-- APK and suspicious-file triage
-
-</td>
+      <h3>⌁ Web & API Security</h3>
+      Application-security fundamentals, access-control review, input validation, and responsible testing.
+    </td>
     <td width="50%" valign="top">
-
-**⌁ SYSTEM CAPABILITIES**
-
-- Python and shell automation
-- Defensive security tooling
-- Threat analysis and documentation
-- AI-assisted research workflows
-
-</td>
-  </tr>
-</table>
-
-<p align="center"><sub>[ ETHICAL BOUNDARY ] All testing is limited to systems I own or have explicit permission to assess.</sub></p>
-
-## `┌─[ 02 ] arsenal & technology`
-
-<p align="center"><img src="./assets/skills-marquee.svg" width="100%" alt="Locally hosted animated skills marquee" /></p>
-
-<p align="center">WEB SECURITY · AUTHORIZED RED TEAMING · MALWARE DEFENSE · PYTHON AUTOMATION</p>
-
-## `┌─[ 03 ] current build tracks`
-
-<table>
-  <tr>
-    <td width="50%" valign="top">
-
-### ◈ Web Security Lab
-
-Learning and building around web application review, API security, reconnaissance workflows and responsible vulnerability validation.
-
-</td>
-    <td width="50%" valign="top">
-
-### ◈ XEBAC HAT Defense
-
-Exploring file and APK inspection, malware triage, safe quarantine concepts and defensive security utilities.
-
-</td>
+      <h3>⌁ Defensive Engineering</h3>
+      Safer defaults, security controls, risk reduction, and practical remediation ideas.
+    </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-
-### ◈ Security Automation
-
-Python and shell-based utilities, structured analysis, repeatable checks and useful reporting.
-
-</td>
+      <h3>⌁ Python Automation</h3>
+      Small utilities, repeatable checks, structured output, and workflow improvements.
+    </td>
     <td width="50%" valign="top">
-
-### ◈ Research & Documentation
-
-Clear notes, reproducible findings, remediation guidance and responsible disclosure practices.
-
-</td>
+      <h3>⌁ Research & Documentation</h3>
+      Clear technical notes, reproducible observations, and responsible knowledge sharing.
+    </td>
   </tr>
 </table>
 
-<p align="center"><a href="https://github.com/obunto-byte?tab=repositories">Explore public repositories →</a></p>
+## `04 // TECH ARSENAL`
 
-## `┌─[ 04 ] GitHub diagnostics`
+<p align="center">
+  <img src="./assets/skills-marquee.svg" width="100%" alt="XEBAC HAT animated technology and security skills marquee" />
+</p>
 
-<p align="center"><img src="./generated/profile-stats.svg" width="100%" alt="Locally generated GitHub contribution and language diagnostics" /></p>
+<p align="center">
+  <sub>PYTHON · WEB SECURITY · DEFENSIVE TOOLING · AUTOMATION · TECHNICAL RESEARCH</sub>
+</p>
 
-<p align="center"><img src="./generated/wakatime-stats.svg" width="100%" alt="Locally generated WakaTime coding-time chart; optional integration" /></p>
+## `05 // GITHUB TELEMETRY`
 
-> **WakaTime setup (optional):** Add a repository Actions secret named `WAKATIME_API_KEY` under **Settings → Secrets and variables → Actions**. The workflow fetches your last-7-days language breakdown and commits a static SVG into this repository. Without the secret, the card shows setup instructions. Your API key is never written into the generated file.
+<p align="center">
+  <img src="./generated/profile-stats.svg" width="100%" alt="XEBAC HAT GitHub profile and language statistics" />
+</p>
 
-## `┌─[ 05 ] contribution skyline`
+<p align="center">
+  <img src="./generated/contribution-skyline.svg" width="100%" alt="Isometric contribution skyline generated from GitHub activity" />
+</p>
 
-<p align="center"><img src="./generated/contribution-skyline.svg" width="100%" alt="Locally generated isometric contribution skyline; building height uses square-root scaling" /></p>
-
-## `┌─[ 06 ] neural activity // contribution snake`
-
-<p align="center"><sub>◈ NEURAL NETWORK TRACE · CONTRIBUTION SIGNALS · CYBERPUNK MODE ◈</sub></p>
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./dist/github-snake-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="./dist/github-snake.svg" />
-    <img src="./dist/github-snake-dark.svg" width="100%" alt="Neon cyan cyberpunk contribution snake over a dark violet and magenta activity grid" />
+    <img src="./dist/github-snake-dark.svg" width="100%" alt="Neon contribution snake across the GitHub activity grid" />
   </picture>
 </p>
-<p align="center"><sub>[ SYSTEM STATUS: TRACKING ] — [ SIGNAL: CONTRIBUTION ACTIVITY ] — [ THEME: NEON CYBERNETIC ]</sub></p>
 
-## `┌─[ 07 ] operating principles`
+<p align="center">
+  <sub>LIVE PROFILE VISUALS · CONTRIBUTION SIGNAL · NEON CYBERNETIC MODE</sub>
+</p>
+
+## `06 // OPERATING PROTOCOL`
 
 ```text
-01  Test only within an authorized scope.
-02  Verify findings; don't exaggerate impact.
-03  Protect evidence, credentials and user data.
-04  Document reproduction steps and remediation.
-05  Prefer secure defaults and defense in depth.
-06  Share knowledge responsibly.
+[01] Work only within an authorized scope.
+[02] Verify observations before describing risk.
+[03] Protect credentials, evidence, and user data.
+[04] Prefer secure defaults and defense in depth.
+[05] Document limitations and practical remediation.
+[06] Share knowledge responsibly.
 ```
 
-## `└─[ 08 ] connect`
+## `07 // ESTABLISH CONNECTION`
 
-<p align="center"><a href="https://github.com/obunto-byte">GITHUB: obunto-byte</a> · <a href="https://github.com/obunto-byte?tab=repositories">REPOSITORIES</a></p>
+<div align="center">
+  <a href="https://github.com/obunto-byte"><img src="https://img.shields.io/badge/GITHUB-OBUNTO--BYTE-00F5FF?style=for-the-badge&logo=github&logoColor=00F5FF&labelColor=0B1020" alt="GitHub obunto-byte" /></a>
+  <a href="https://github.com/obunto-byte?tab=repositories"><img src="https://img.shields.io/badge/ALL_PUBLIC_REPOS-FF3CAC?style=for-the-badge&logo=github&logoColor=FF3CAC&labelColor=0B1020" alt="All public repositories" /></a>
 
-<p align="center"><sub>Curiosity finds the weakness. Discipline validates it. Research helps build the defense.</sub></p>
+  <p><strong>Build securely. Think critically. Share responsibly.</strong></p>
+  <sub>END OF TRANSMISSION // XEBAC HAT</sub>
+</div>
 
-<img src="./assets/matrix-footer.svg" width="100%" alt="XEBAC HAT end of transmission" />
+<img src="./assets/matrix-footer.svg" width="100%" alt="XEBAC HAT cyberpunk end-of-transmission footer" />
