@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="390" viewBox="0 0 1200 390" role="img" aria-labelledby="title desc">
+<title id="title">XEBAC HAT cyberpunk security core</title>
+<desc id="desc">A futuristic neon security core with cyan and magenta orbital rings, circuit traces, and a dark cyberpunk terminal atmosphere.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#070B18"/><stop offset=".55" stop-color="#10132B"/><stop offset="1" stop-color="#250C2B"/></linearGradient>
+  <linearGradient id="neon" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#00F5FF"/><stop offset=".5" stop-color="#8B5CF6"/><stop offset="1" stop-color="#FF3CAC"/></linearGradient>
+  <radialGradient id="core"><stop stop-color="#DDFBFF" stop-opacity=".9"/><stop offset=".18" stop-color="#00F5FF" stop-opacity=".52"/><stop offset=".58" stop-color="#8B5CF6" stop-opacity=".16"/><stop offset="1" stop-color="#0B1020" stop-opacity="0"/></radialGradient>
+  <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0V34" fill="none" stroke="#8290C8" stroke-opacity=".13"/></pattern>
+  <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M0 3.5H4" stroke="#D8FBFF" stroke-opacity=".045"/></pattern>
+  <filter id="glow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="25"/></filter>
+</defs>
+<rect width="1200" height="390" rx="24" fill="url(#bg)"/>
+<rect width="1200" height="390" rx="24" fill="url(#grid)"/>
+<rect width="1200" height="390" rx="24" fill="url(#scan)"/>
+<ellipse cx="870" cy="190" rx="235" ry="180" fill="#8B5CF6" opacity=".12" filter="url(#soft)"/>
+<g fill="none" stroke="url(#neon)" opacity=".4">
+ <path d="M0 90H260L310 140H420M0 300H280L340 240H450M1200 76H1040L1000 116H930M1200 322H1040L1000 282H930" stroke-width="2"/>
+ <path d="M40 90V45H160M1150 76V42H1080M50 300V350H175M1140 322V350H1055" stroke-width="1"/>
+ <path d="M450 54H600L630 84M450 338H600L630 308M960 54H850L820 84M960 338H850L820 308" stroke-dasharray="4 8"/>
+</g>
+<g fill="#00F5FF"><circle cx="260" cy="90" r="3"/><circle cx="280" cy="300" r="3"/><circle cx="1040" cy="76" r="3"/><circle cx="1040" cy="322" r="3"/></g>
+<g transform="translate(865 194)" fill="none" filter="url(#glow)">
+ <ellipse rx="172" ry="67" stroke="#00F5FF" stroke-width="2" transform="rotate(-22)"/>
+ <ellipse rx="172" ry="67" stroke="#FF3CAC" stroke-width="2" transform="rotate(56)" opacity=".8"/>
+ <ellipse rx="132" ry="132" stroke="#8B5CF6" stroke-width="1.5" stroke-dasharray="8 10"/>
+ <ellipse rx="105" ry="105" stroke="#00F5FF" stroke-opacity=".6" stroke-width="1"/>
+ <circle r="88" fill="url(#core)" stroke="#00F5FF" stroke-opacity=".85" stroke-width="2"/>
+ <circle r="58" stroke="#FF3CAC" stroke-opacity=".8" stroke-width="1.5" stroke-dasharray="3 8"/>
+ <path d="M-65 0H65M0 -65V65M-45 -45L45 45M45 -45L-45 45" stroke="#C8F9FF" stroke-opacity=".42"/>
+ <circle r="18" fill="#E8FDFF" fill-opacity=".8"/>
+ <circle r="7" fill="#00F5FF"/>
+ <circle cx="158" cy="-38" r="7" fill="#00F5FF"/><circle cx="-140" cy="88" r="5" fill="#FF3CAC"/>
+</g>
+<g font-family="monospace">
+ <text x="68" y="80" fill="#00F5FF" font-size="13" letter-spacing="4">XEBAC HAT // SECURITY LAB</text>
+ <text x="68" y="155" fill="#F4F7FF" font-size="57" font-weight="700" letter-spacing="3">XEBAC HAT</text>
+ <text x="70" y="193" fill="#B6C4E8" font-size="17" letter-spacing="2">DEFENSIVE SECURITY · PYTHON AUTOMATION</text>
+ <text x="70" y="220" fill="#B6C4E8" font-size="17" letter-spacing="2">SYSTEMS RESEARCH · RESPONSIBLE TESTING</text>
+ <path d="M70 250H470" stroke="url(#neon)" stroke-width="2"/>
+ <text x="70" y="282" fill="#00F5FF" font-size="13">[ CORE STATUS ]</text>
+ <text x="70" y="306" fill="#A3AECF" font-size="12">IDENTITY: ONLINE</text>
+ <text x="70" y="326" fill="#A3AECF" font-size="12">MODE: AUTHORIZED RESEARCH</text>
+ <text x="70" y="346" fill="#A3AECF" font-size="12">SIGNAL: STABLE</text>
+ <text x="1130" y="365" fill="#8290C8" text-anchor="end" font-size="10" letter-spacing="2">BUILD / VERIFY / DEFEND</text>
+</g>
+<rect x="1.5" y="1.5" width="1197" height="387" rx="23" fill="none" stroke="url(#neon)" stroke-width="2" opacity=".9"/>
+</svg>
