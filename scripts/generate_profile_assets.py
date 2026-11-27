@@ -114,29 +114,29 @@ def make_contribution_topography(calendar, username):
         y = 119 + wi * 0.24 + di * 10.05
         p1, p2 = pt(x, y), pt(x + 13.2, y + 0.25)
         p3, p4 = pt(x + 6.6, y + 9.35), pt(x - 6.6, y + 9.10)
-        tiles.append(poly([p1, p2, p3, p4], "#193020" if count else "#14231a", .96))
+        tiles.append(poly([p1, p2, p3, p4], "#24121A" if count else "#171B21", .96))
         if not count:
             continue
         height = 8 + math.log2(count + 1) * 11.5
         a1, a2, a3, a4 = [(px, py - height) for px, py in (p1, p2, p3, p4)]
         # Three visible faces give each real contribution day an isometric column.
-        towers.append(poly([a4, a3, p3, p4], "#294e2c", .98))
-        towers.append(poly([a2, a3, p3, p2], "#416f37", .98))
+        towers.append(poly([a4, a3, p3, p4], "#591528", .98))
+        towers.append(poly([a2, a3, p3, p2], "#941D39", .98))
         level = 1 if count == 1 else min(4, 1 + int(4 * count / max(1, maximum)))
-        top_colors = ["#47743b", "#669a42", "#8fbd4c", "#b7ec61"]
+        top_colors = ["#7F1D35", "#B4233D", "#E11D48", "#FF526B"]
         towers.append(poly([a1, a2, a3, a4], top_colors[level - 1], 1))
 
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="960" height="322" viewBox="0 0 960 322" role="img" aria-labelledby="title desc">
 <title id="title">{esc(username)} contribution topography</title>
 <desc id="desc">{total:,} real GitHub contributions in the calendar window. Each raised isometric column represents a day with contributions; height is logarithmically scaled from the GitHub contribution count.</desc>
-<rect x="0.5" y="0.5" width="959" height="321" rx="15" fill="#0a100f" stroke="#30443a"/>
-<text x="24" y="29" fill="#b7ef65" font-family="monospace" font-size="11" font-weight="700" letter-spacing="1.8">CONTRIBUTION TOPOGRAPHY / 3D</text>
-<text x="24" y="55" fill="#b7ef65" font-family="monospace" font-size="18" font-weight="700">{total:,} contributions</text>
-<text x="936" y="29" text-anchor="end" fill="#87978e" font-family="monospace" font-size="9" font-weight="700">GITHUB CALENDAR / 1 YEAR</text>
+<rect x="0.5" y="0.5" width="959" height="321" rx="15" fill="#080A0D" stroke="#343B45"/>
+<text x="24" y="29" fill="#DC143C" font-family="monospace" font-size="11" font-weight="700" letter-spacing="1.8">CONTRIBUTION TOPOGRAPHY / 3D</text>
+<text x="24" y="55" fill="#E5E7EB" font-family="monospace" font-size="18" font-weight="700">{total:,} contributions</text>
+<text x="936" y="29" text-anchor="end" fill="#9CA3AF" font-family="monospace" font-size="9" font-weight="700">GITHUB CALENDAR / 1 YEAR</text>
 <g>{''.join(tiles)}</g><g>{''.join(towers)}</g>
-<path d="M24 273H936" stroke="#27362f" stroke-width="1"/>
-<text x="24" y="299" fill="#9aa99f" font-family="monospace" font-size="9">DATE → / HEIGHT = LOG-SCALED CONTRIBUTION COUNT</text>
-<text x="936" y="299" text-anchor="end" fill="#9aa99f" font-family="monospace" font-size="9">GENERATED FROM GITHUB GRAPHQL</text>
+<path d="M24 273H936" stroke="#303741" stroke-width="1"/>
+<text x="24" y="299" fill="#C3C7CE" font-family="monospace" font-size="9">DATE → / HEIGHT = LOG-SCALED CONTRIBUTION COUNT</text>
+<text x="936" y="299" text-anchor="end" fill="#C3C7CE" font-family="monospace" font-size="9">GENERATED FROM GITHUB GRAPHQL</text>
 </svg>'''
 
 def make_contribution_trace(calendar, username):
@@ -146,7 +146,7 @@ def make_contribution_trace(calendar, username):
                for di, day in enumerate(week.get("contributionDays") or [])]
     total = int(calendar.get("totalContributions") or 0)
     maximum = max((int(day.get("contributionCount") or 0) for _, _, day in entries), default=0)
-    palette = ["#18251f", "#2d4b30", "#4d7838", "#83b84b", "#b8ef68"]
+    palette = ["#171B21", "#3A111E", "#74172D", "#B4233D", "#F0445E"]
     cells, points = [], []
     for wi, di, day in entries:
         count = int(day.get("contributionCount") or 0)
@@ -163,19 +163,19 @@ def make_contribution_trace(calendar, username):
     pulse = ""
     if points:
         last_x, last_y = points[-1]
-        pulse = f'<circle cx="{last_x:.2f}" cy="{last_y:.2f}" r="2.2" fill="#e5ffc4"><animate attributeName="r" values="2;4;2" dur="2.4s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;.45;1" dur="2.4s" repeatCount="indefinite"/></circle>'
+        pulse = f'<circle cx="{last_x:.2f}" cy="{last_y:.2f}" r="2.2" fill="#F4F4F5"><animate attributeName="r" values="2;4;2" dur="2.4s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;.45;1" dur="2.4s" repeatCount="indefinite"/></circle>'
 
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="960" height="190" viewBox="0 0 960 190" role="img" aria-labelledby="title desc">
 <title id="title">{esc(username)} contribution trace</title>
 <desc id="desc">Real GitHub contribution calendar cells for {total:,} contributions. Brighter cells represent days with more activity. The animated trace connects dates with recorded contributions; blank days remain unconnected.</desc>
-<rect x="0.5" y="0.5" width="959" height="189" rx="15" fill="#0a100f" stroke="#30443a"/>
-<text x="24" y="28" fill="#b7ef65" font-family="monospace" font-size="11" font-weight="700" letter-spacing="1.6">CONTRIBUTION TRACE / REAL ACTIVITY</text>
-<g fill="none" stroke="#b7ef65" stroke-opacity=".26" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+<rect x="0.5" y="0.5" width="959" height="189" rx="15" fill="#080A0D" stroke="#343B45"/>
+<text x="24" y="28" fill="#DC143C" font-family="monospace" font-size="11" font-weight="700" letter-spacing="1.6">CONTRIBUTION TRACE / REAL ACTIVITY</text>
+<g fill="none" stroke="#F0445E" stroke-opacity=".48" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
 <path d="{path_d}" pathLength="1000" stroke-dasharray="1000" stroke-dashoffset="1000"><animate attributeName="stroke-dashoffset" from="1000" to="0" dur="12s" repeatCount="indefinite"/></path>
 </g>
 <g>{''.join(cells)}</g>{pulse}
-<text x="24" y="169" fill="#9aa99f" font-family="monospace" font-size="9">ANIMATED TRACE THROUGH CONTRIBUTION DAYS / CALENDAR IS NOT SIMULATED</text>
-<text x="936" y="169" text-anchor="end" fill="#9aa99f" font-family="monospace" font-size="9">{total:,} VERIFIED CALENDAR CONTRIBUTIONS</text>
+<text x="24" y="169" fill="#C3C7CE" font-family="monospace" font-size="9">ANIMATED TRACE THROUGH CONTRIBUTION DAYS / CALENDAR IS NOT SIMULATED</text>
+<text x="936" y="169" text-anchor="end" fill="#C3C7CE" font-family="monospace" font-size="9">{total:,} VERIFIED CALENDAR CONTRIBUTIONS</text>
 </svg>'''
 
 
