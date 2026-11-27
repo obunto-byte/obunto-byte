@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="226" viewBox="0 0 960 226" role="img" aria-labelledby="title desc">
+  <title id="title">XEBAC HAT — Cyberpunk Research Domain Matrix</title>
+  <desc id="desc">Four connected research domains presented in a dark cyberpunk interface with neon cyan and magenta circuitry, animated status lights, and terminal-style labels.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#080D1A"/>
+      <stop offset=".52" stop-color="#0B0B1B"/>
+      <stop offset="1" stop-color="#12091B"/>
+    </linearGradient>
+    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00E5FF"/>
+      <stop offset=".48" stop-color="#7C4DFF"/>
+      <stop offset="1" stop-color="#FF35C8"/>
+    </linearGradient>
+    <linearGradient id="cyanPanel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0C1D2A" stop-opacity=".98"/>
+      <stop offset="1" stop-color="#101226" stop-opacity=".96"/>
+    </linearGradient>
+    <linearGradient id="magentaPanel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#171126" stop-opacity=".98"/>
+      <stop offset="1" stop-color="#101226" stop-opacity=".96"/>
+    </linearGradient>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#4B72A8" stroke-opacity=".10" stroke-width=".7"/>
+      <circle cx="0" cy="0" r="1" fill="#00E5FF" fill-opacity=".18"/>
+    </pattern>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="2.4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="1.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Main frame and grid -->
+  <rect x=".75" y=".75" width="958.5" height="224.5" rx="11" fill="url(#bg)" stroke="url(#neon)" stroke-width="1.2"/>
+  <rect x="2" y="2" width="956" height="222" rx="10" fill="url(#grid)"/>
+
+  <!-- Neon transmission rails -->
+  <g fill="none" stroke="url(#neon)" stroke-width="1.5" opacity=".9">
+    <path d="M0 12H960"/>
+    <path d="M0 18H960" opacity=".45"/>
+    <path d="M0 214H960" opacity=".75"/>
+    <path d="M24 43H170L188 58H240"/>
+    <path d="M720 58H772L790 43H936"/>
+  </g>
+  <g fill="none" stroke="#00E5FF" stroke-width="2" filter="url(#softGlow)">
+    <path d="M24 43H170L188 58H214"/>
+    <path d="M24 58H78"/>
+    <path d="M24 196H116L132 181H170"/>
+  </g>
+  <g fill="none" stroke="#FF35C8" stroke-width="2" filter="url(#softGlow)">
+    <path d="M936 43H790L772 58H746"/>
+    <path d="M936 58H882"/>
+    <path d="M936 196H844L828 181H790"/>
+  </g>
+
+  <!-- Header -->
+  <g font-family="monospace">
+    <text x="24" y="31" fill="#00E5FF" font-size="10" font-weight="700" letter-spacing="2.1">
+      XEBAC HAT / RESEARCH MATRIX
+    </text>
+    <text x="936" y="31" fill="#B6C5D8" font-size="8.5" text-anchor="end" letter-spacing="1.2">
+      FOUR CONNECTED DOMAINS / 04
+    </text>
+    <text x="480" y="51" fill="#EAF6FF" font-size="8.5" text-anchor="middle" letter-spacing="2.1">
+      RESPONSIBLE RESEARCH • DEFENSE • CONTINUOUS LEARNING
+    </text>
+  </g>
+
+  <!-- Circuit status nodes -->
+  <g filter="url(#glow)">
+    <circle cx="12" cy="31" r="2.5" fill="#00E5FF">
+      <animate attributeName="opacity" values=".25;1;.25" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="948" cy="31" r="2.5" fill="#FF35C8">
+      <animate attributeName="opacity" values="1;.25;1" dur="3.4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Domain 01 -->
+  <g transform="translate(24 66)" font-family="monospace">
+    <rect width="216" height="132" rx="6" fill="url(#cyanPanel)" stroke="#00BFEA" stroke-opacity=".72"/>
+    <path d="M1 7V1H8M208 1H215V8M1 124V131H8M208 131H215V124" fill="none" stroke="#00E5FF" stroke-width="1.2"/>
+    <path d="M12 39H204" stroke="#00BFEF" stroke-opacity=".38"/>
+    <circle cx="190" cy="19" r="4" fill="#00E5FF" filter="url(#glow)">
+      <animate attributeName="opacity" values=".2;1;.2" dur="2.7s" repeatCount="indefinite"/>
+    </circle>
+    <text x="13" y="24" fill="#00E5FF" font-size="11">01 /</text>
+    <text x="13" y="65" fill="#F0F7FF" font-size="11.5" font-weight="bold">AI &amp; AGENT SECURITY</text>
+    <text x="13" y="87" fill="#A9BDD2" font-size="9.1">LLM evaluation / threat modelling</text>
+    <path d="M13 111H203" stroke="#30465E"/>
+    <rect x="13" y="109" width="48" height="3.5" fill="#00E5FF" filter="url(#softGlow)">
+      <animate attributeName="width" values="48;155;48" dur="5s" repeatCount="indefinite"/>
+    </rect>
+    <text x="203" y="124" text-anchor="end" fill="#6E91AC" font-size="7">NODE / 01</text>
+  </g>
+
+  <!-- Domain 02 -->
+  <g transform="translate(256 66)" font-family="monospace">
+    <rect width="216" height="132" rx="6" fill="url(#cyanPanel)" stroke="#547DDF" stroke-opacity=".78"/>
+    <path d="M1 7V1H8M208 1H215V8M1 124V131H8M208 131H215V124" fill="none" stroke="#6B8DFF" stroke-width="1.2"/>
+    <path d="M12 39H204" stroke="#6B8DFF" stroke-opacity=".4"/>
+    <circle cx="190" cy="19" r="4" fill="#7B8DFF" filter="url(#glow)">
+      <animate attributeName="opacity" values=".2;1;.2" dur="3.4s" repeatCount="indefinite"/>
+    </circle>
+    <text x="13" y="24" fill="#8FA9FF" font-size="11">02 /</text>
+    <text x="13" y="65" fill="#F0F7FF" font-size="11.5" font-weight="bold">OFFENSIVE SECURITY</text>
+    <text x="13" y="87" fill="#A9BDD2" font-size="9.1">Web / API / network / AD</text>
+    <path d="M13 111H203" stroke="#30465E"/>
+    <rect x="13" y="109" width="48" height="3.5" fill="#7B8DFF" filter="url(#softGlow)">
+      <animate attributeName="width" values="48;155;48" dur="6s" repeatCount="indefinite"/>
+    </rect>
+    <text x="203" y="124" text-anchor="end" fill="#6E91AC" font-size="7">NODE / 02</text>
+  </g>
+
+  <!-- Domain 03 -->
+  <g transform="translate(488 66)" font-family="monospace">
+    <rect width="216" height="132" rx="6" fill="url(#magentaPanel)" stroke="#B044D5" stroke-opacity=".8"/>
+    <path d="M1 7V1H8M208 1H215V8M1 124V131H8M208 131H215V124" fill="none" stroke="#C14DFF" stroke-width="1.2"/>
+    <path d="M12 39H204" stroke="#C14DFF" stroke-opacity=".42"/>
+    <circle cx="190" cy="19" r="4" fill="#C14DFF" filter="url(#glow)">
+      <animate attributeName="opacity" values=".2;1;.2" dur="4.1s" repeatCount="indefinite"/>
+    </circle>
+    <text x="13" y="24" fill="#D18BFF" font-size="11">03 /</text>
+    <text x="13" y="65" fill="#F0F7FF" font-size="11.5" font-weight="bold">SECURITY ENGINEERING</text>
+    <text x="13" y="87" fill="#B8AFCF" font-size="9.1">Automation / evidence / remediation</text>
+    <path d="M13 111H203" stroke="#45324F"/>
+    <rect x="13" y="109" width="48" height="3.5" fill="#D04DFF" filter="url(#softGlow)">
+      <animate attributeName="width" values="48;155;48" dur="7s" repeatCount="indefinite"/>
+    </rect>
+    <text x="203" y="124" text-anchor="end" fill="#9175A6" font-size="7">NODE / 03</text>
+  </g>
+
+  <!-- Domain 04 -->
+  <g transform="translate(720 66)" font-family="monospace">
+    <rect width="216" height="132" rx="6" fill="url(#magentaPanel)" stroke="#FF35C8" stroke-opacity=".78"/>
+    <path d="M1 7V1H8M208 1H215V8M1 124V131H8M208 131H215V124" fill="none" stroke="#FF35C8" stroke-width="1.2"/>
+    <path d="M12 39H204" stroke="#FF35C8" stroke-opacity=".42"/>
+    <circle cx="190" cy="19" r="4" fill="#FF35C8" filter="url(#glow)">
+      <animate attributeName="opacity" values=".2;1;.2" dur="4.8s" repeatCount="indefinite"/>
+    </circle>
+    <text x="13" y="24" fill="#FF70D7" font-size="11">04 /</text>
+    <text x="13" y="65" fill="#F0F7FF" font-size="11.5" font-weight="bold">CLOUD &amp; GOVERNANCE</text>
+    <text x="13" y="87" fill="#B8AFCF" font-size="9.1">IAM / cloud / ISO 27001</text>
+    <path d="M13 111H203" stroke="#45324F"/>
+    <rect x="13" y="109" width="48" height="3.5" fill="#FF35C8" filter="url(#softGlow)">
+      <animate attributeName="width" values="48;155;48" dur="8s" repeatCount="indefinite"/>
+    </rect>
+    <text x="203" y="124" text-anchor="end" fill="#9175A6" font-size="7">NODE / 04</text>
+  </g>
+
+  <!-- Bottom transmission strip -->
+  <path d="M24 210H936" stroke="url(#neon)" stroke-opacity=".7"/>
+  <g font-family="monospace" font-size="7.5">
+    <text x="24" y="220" fill="#8FA9C2">XEBAC HAT // BUILD • ANALYZE • PROTECT</text>
+    <text x="936" y="220" text-anchor="end" fill="#E77BEA">RESEARCH LINK / ONLINE</text>
+  </g>
+</svg>
