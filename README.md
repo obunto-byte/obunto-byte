@@ -96,6 +96,25 @@ A Windows-first defensive intrusion-detection and monitoring prototype built wit
 
 <a href="https://github.com/obunto-byte/obunto-byte/tree/main/projects/XEBAC_HAT_AI_IDS_V2"><img src="https://img.shields.io/badge/PROJECT-DOCUMENTATION-00F5FF?style=for-the-badge&logo=readthedocs&logoColor=00F5FF&labelColor=0B1020" alt="Project documentation" /></a>
 
+
+### xebachat v1.2 — Endpoint & Parameter Discovery
+
+A Python crawler for mapping URLs and endpoint references in web resources during **authorized assessments**.
+
+- Parses HTML, JavaScript, CSS, XML, JSON, and text for URL references.
+- Supports bounded crawl depth, request pacing, retries, deduplication, and optional robots.txt checks.
+- Exports discovered URLs as text or JSONL and can extract path/extension-based values.
+- **Limitations:** heuristic extraction only; it does not execute JavaScript or PHP. Domain scoping is approximate, and robots.txt is not permission to test.
+
+**Quick start:** install Python 3.10+ and dependencies with `python -m pip install -r requirements.txt`, then run `python xebachat.py --help`.
+
+Use only on systems you own or have explicit written permission to assess. Start with a low request rate and shallow depth.
+
+<p align="center">
+  <a href="https://github.com/obunto-byte/xebachat"><img src="https://img.shields.io/badge/VIEW_XEBACHAT_v1.2-00F5FF?style=for-the-badge&logo=github&logoColor=00F5FF&labelColor=0B1020" alt="View xebachat v1.2 source code" /></a>
+  <a href="https://github.com/obunto-byte/xebachat/blob/main/README.md"><img src="https://img.shields.io/badge/SETUP_%26_DOCUMENTATION-FF3CAC?style=for-the-badge&logo=readthedocs&logoColor=FF3CAC&labelColor=0B1020" alt="xebachat setup and documentation" /></a>
+</p>
+
 ---
 
 ## 03 / Current build tracks
