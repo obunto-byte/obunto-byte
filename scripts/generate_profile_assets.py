@@ -95,6 +95,90 @@ def make_skyline(calendar, username):
 <text x="48" y="580" fill="{MUTED}" font-family="monospace" font-size="11">A DAY-BY-DAY MAP OF CONSISTENCY — NOT A RANKING</text>
 <text x="1148" y="58" text-anchor="end" fill="{PURPLE}" font-family="monospace" font-size="20" font-weight="700">{total:,}</text><text x="1148" y="80" text-anchor="end" fill="{MUTED}" font-family="monospace" font-size="10">CONTRIBUTIONS</text></svg>'''
 
+
+def make_contribution_topography(calendar, username):
+    """Render authentic daily GitHub counts as a compact isometric contribution field."""
+    weeks = calendar.get("weeks") or []
+    entries = [(wi, di, day) for wi, week in enumerate(weeks)
+               for di, day in enumerate(week.get("contributionDays") or [])]
+    total = int(calendar.get("totalContributions") or 0)
+    maximum = max((int(day.get("contributionCount") or 0) for _, _, day in entries), default=0)
+
+    def pt(x, y):
+        return (round(x, 2), round(y, 2))
+
+    tiles, towers = [], []
+    for wi, di, day in entries:
+        count = int(day.get("contributionCount") or 0)
+        x = 62 + wi * 15.2 - di * 7.35
+        y = 119 + wi * 0.24 + di * 10.05
+        p1, p2 = pt(x, y), pt(x + 13.2, y + 0.25)
+        p3, p4 = pt(x + 6.6, y + 9.35), pt(x - 6.6, y + 9.10)
+        tiles.append(poly([p1, p2, p3, p4], "#193020" if count else "#14231a", .96))
+        if not count:
+            continue
+        height = 8 + math.log2(count + 1) * 11.5
+        a1, a2, a3, a4 = [(px, py - height) for px, py in (p1, p2, p3, p4)]
+        # Three visible faces give each real contribution day an isometric column.
+        towers.append(poly([a4, a3, p3, p4], "#294e2c", .98))
+        towers.append(poly([a2, a3, p3, p2], "#416f37", .98))
+        level = 1 if count == 1 else min(4, 1 + int(4 * count / max(1, maximum)))
+        top_colors = ["#47743b", "#669a42", "#8fbd4c", "#b7ec61"]
+        towers.append(poly([a1, a2, a3, a4], top_colors[level - 1], 1))
+
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="960" height="322" viewBox="0 0 960 322" role="img" aria-labelledby="title desc">
+<title id="title">{esc(username)} contribution topography</title>
+<desc id="desc">{total:,} real GitHub contributions in the calendar window. Each raised isometric column represents a day with contributions; height is logarithmically scaled from the GitHub contribution count.</desc>
+<rect x="0.5" y="0.5" width="959" height="321" rx="15" fill="#0a100f" stroke="#30443a"/>
+<text x="24" y="29" fill="#b7ef65" font-family="monospace" font-size="11" font-weight="700" letter-spacing="1.8">CONTRIBUTION TOPOGRAPHY / 3D</text>
+<text x="24" y="55" fill="#b7ef65" font-family="monospace" font-size="18" font-weight="700">{total:,} contributions</text>
+<text x="936" y="29" text-anchor="end" fill="#87978e" font-family="monospace" font-size="9" font-weight="700">GITHUB CALENDAR / 1 YEAR</text>
+<g>{''.join(tiles)}</g><g>{''.join(towers)}</g>
+<path d="M24 273H936" stroke="#27362f" stroke-width="1"/>
+<text x="24" y="299" fill="#9aa99f" font-family="monospace" font-size="9">DATE → / HEIGHT = LOG-SCALED CONTRIBUTION COUNT</text>
+<text x="936" y="299" text-anchor="end" fill="#9aa99f" font-family="monospace" font-size="9">GENERATED FROM GITHUB GRAPHQL</text>
+</svg>'''
+
+def make_contribution_trace(calendar, username):
+    """Render the actual calendar cells and animate a path through active days."""
+    weeks = calendar.get("weeks") or []
+    entries = [(wi, di, day) for wi, week in enumerate(weeks)
+               for di, day in enumerate(week.get("contributionDays") or [])]
+    total = int(calendar.get("totalContributions") or 0)
+    maximum = max((int(day.get("contributionCount") or 0) for _, _, day in entries), default=0)
+    palette = ["#18251f", "#2d4b30", "#4d7838", "#83b84b", "#b8ef68"]
+    cells, points = [], []
+    for wi, di, day in entries:
+        count = int(day.get("contributionCount") or 0)
+        x, y = 24 + wi * 16.05, 48 + di * 15.0
+        level = 0 if count == 0 else min(4, 1 + int(4 * count / max(1, maximum)))
+        cells.append(f'<rect x="{x:.2f}" y="{y:.2f}" width="12" height="11" rx="2" fill="{palette[level]}"/>')
+        if count:
+            points.append((x + 6, y + 5.5))
+
+    path_d = ""
+    if points:
+        path_d = "M " + " L ".join(f"{x:.2f} {y:.2f}" for x, y in points)
+    path_len = max(1, len(points) * 20)
+    pulse = ""
+    if points:
+        last_x, last_y = points[-1]
+        pulse = f'<circle cx="{last_x:.2f}" cy="{last_y:.2f}" r="2.2" fill="#e5ffc4"><animate attributeName="r" values="2;4;2" dur="2.4s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;.45;1" dur="2.4s" repeatCount="indefinite"/></circle>'
+
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="960" height="190" viewBox="0 0 960 190" role="img" aria-labelledby="title desc">
+<title id="title">{esc(username)} contribution trace</title>
+<desc id="desc">Real GitHub contribution calendar cells for {total:,} contributions. Brighter cells represent days with more activity. The animated trace connects dates with recorded contributions; blank days remain unconnected.</desc>
+<rect x="0.5" y="0.5" width="959" height="189" rx="15" fill="#0a100f" stroke="#30443a"/>
+<text x="24" y="28" fill="#b7ef65" font-family="monospace" font-size="11" font-weight="700" letter-spacing="1.6">CONTRIBUTION TRACE / REAL ACTIVITY</text>
+<g fill="none" stroke="#b7ef65" stroke-opacity=".26" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+<path d="{path_d}" pathLength="1000" stroke-dasharray="1000" stroke-dashoffset="1000"><animate attributeName="stroke-dashoffset" from="1000" to="0" dur="12s" repeatCount="indefinite"/></path>
+</g>
+<g>{''.join(cells)}</g>{pulse}
+<text x="24" y="169" fill="#9aa99f" font-family="monospace" font-size="9">ANIMATED TRACE THROUGH CONTRIBUTION DAYS / CALENDAR IS NOT SIMULATED</text>
+<text x="936" y="169" text-anchor="end" fill="#9aa99f" font-family="monospace" font-size="9">{total:,} VERIFIED CALENDAR CONTRIBUTIONS</text>
+</svg>'''
+
+
 def make_stats(user):
     cc, repos = user["contributionsCollection"], user.get("repositories",{}).get("nodes",[])
     calendar = cc["contributionCalendar"]
@@ -160,7 +244,9 @@ def main():
     user = github_data(token,username)
     OUT.mkdir(parents=True,exist_ok=True)
     calendar = user["contributionsCollection"]["contributionCalendar"]
-    outputs = {"contribution-skyline.svg":make_skyline(calendar,username),
+    outputs = {"contribution-topography.svg":make_contribution_topography(calendar,username),
+               "contribution-trace.svg":make_contribution_trace(calendar,username),
+               "contribution-skyline.svg":make_skyline(calendar,username),
                "profile-stats.svg":make_stats(user),
                "wakatime-stats.svg":make_wakatime(os.environ.get("WAKATIME_API_KEY","").strip() or None)}
     for name,content in outputs.items():
