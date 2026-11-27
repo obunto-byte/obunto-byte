@@ -170,44 +170,52 @@ def make_contribution_topography(calendar, username):
 
 
 def make_contribution_trace(calendar, username):
-    """Render the actual calendar cells and animate a path through active days."""
+    """Render the real GitHub calendar as an animated Cyberpunk-style trace."""
     weeks = calendar.get("weeks") or []
     entries = [(wi, di, day) for wi, week in enumerate(weeks)
                for di, day in enumerate(week.get("contributionDays") or [])]
     total = int(calendar.get("totalContributions") or 0)
     maximum = max((int(day.get("contributionCount") or 0) for _, _, day in entries), default=0)
-    palette = ["#171B21", "#3A111E", "#74172D", "#B4233D", "#F0445E"]
+
+    # Level 0 is an inactive day; active levels move from dim amber to Cyberpunk yellow.
+    palette = ["#171B21", "#362D0A", "#74610B", "#B49A08", "#FCEE0A"]
     cells, points = [], []
     for wi, di, day in entries:
         count = int(day.get("contributionCount") or 0)
         x, y = 24 + wi * 16.05, 48 + di * 15.0
         level = 0 if count == 0 else min(4, 1 + int(4 * count / max(1, maximum)))
-        cells.append(f'<rect x="{x:.2f}" y="{y:.2f}" width="12" height="11" rx="2" fill="{palette[level]}"/>')
+        cells.append(
+            f'<rect x="{x:.2f}" y="{y:.2f}" width="12" height="11" rx="2" fill="{palette[level]}"/>'
+        )
         if count:
             points.append((x + 6, y + 5.5))
 
     path_d = ""
     if points:
         path_d = "M " + " L ".join(f"{x:.2f} {y:.2f}" for x, y in points)
-    path_len = max(1, len(points) * 20)
     pulse = ""
     if points:
         last_x, last_y = points[-1]
-        pulse = f'<circle cx="{last_x:.2f}" cy="{last_y:.2f}" r="2.2" fill="#F4F4F5"><animate attributeName="r" values="2;4;2" dur="2.4s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;.45;1" dur="2.4s" repeatCount="indefinite"/></circle>'
+        pulse = (
+            f'<circle cx="{last_x:.2f}" cy="{last_y:.2f}" r="2.2" fill="#FF2A6D">'
+            '<animate attributeName="r" values="2;4;2" dur="2.4s" repeatCount="indefinite"/>'
+            '<animate attributeName="opacity" values="1;.45;1" dur="2.4s" repeatCount="indefinite"/>'
+            '</circle>'
+        )
 
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="960" height="190" viewBox="0 0 960 190" role="img" aria-labelledby="title desc">
-<title id="title">{esc(username)} contribution trace</title>
-<desc id="desc">Real GitHub contribution calendar cells for {total:,} contributions. Brighter cells represent days with more activity. The animated trace connects dates with recorded contributions; blank days remain unconnected.</desc>
-<rect x="0.5" y="0.5" width="959" height="189" rx="15" fill="#080A0D" stroke="#343B45"/>
-<text x="24" y="28" fill="#DC143C" font-family="monospace" font-size="11" font-weight="700" letter-spacing="1.6">CONTRIBUTION TRACE / REAL ACTIVITY</text>
-<g fill="none" stroke="#F0445E" stroke-opacity=".48" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+<title id="title">{esc(username)} Cyberpunk contribution trace</title>
+<desc id="desc">Real GitHub contribution calendar cells for {total:,} contributions. Yellow intensity represents each day's recorded activity. An animated cyan trace connects dates with contributions; a magenta pulse marks the latest active date. Blank days remain unconnected.</desc>
+<rect x="0.5" y="0.5" width="959" height="189" rx="15" fill="#08080D" stroke="#4A4552"/>
+<path d="M16 1H944" stroke="#FCEE0A" stroke-opacity=".42"/>
+<text x="24" y="28" fill="#FCEE0A" font-family="monospace" font-size="11" font-weight="700" letter-spacing="1.6">CONTRIBUTION TRACE / NIGHT CITY ACTIVITY</text>
+<g fill="none" stroke="#05D9E8" stroke-opacity=".72" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
 <path d="{path_d}" pathLength="1000" stroke-dasharray="1000" stroke-dashoffset="1000"><animate attributeName="stroke-dashoffset" from="1000" to="0" dur="12s" repeatCount="indefinite"/></path>
 </g>
 <g>{''.join(cells)}</g>{pulse}
-<text x="24" y="169" fill="#C3C7CE" font-family="monospace" font-size="9">ANIMATED TRACE THROUGH CONTRIBUTION DAYS / CALENDAR IS NOT SIMULATED</text>
-<text x="936" y="169" text-anchor="end" fill="#C3C7CE" font-family="monospace" font-size="9">{total:,} VERIFIED CALENDAR CONTRIBUTIONS</text>
+<text x="24" y="169" fill="#B6B1BC" font-family="monospace" font-size="9">ANIMATED TRACE THROUGH VERIFIED CONTRIBUTION DAYS / SOURCE: GITHUB GRAPHQL</text>
+<text x="936" y="169" text-anchor="end" fill="#FCEE0A" font-family="monospace" font-size="9">{total:,} VERIFIED CALENDAR CONTRIBUTIONS</text>
 </svg>'''
-
 
 def make_stats(user):
     cc, repos = user["contributionsCollection"], user.get("repositories",{}).get("nodes",[])

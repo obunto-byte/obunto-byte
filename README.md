@@ -117,9 +117,9 @@ I prefer projects that explain what they check, what their results mean, and wha
 
   <img width="100%" src="./generated/contribution-topography.svg" alt="3D isometric GitHub contribution topography generated from real contribution data"/>
 
-  <img width="100%" src="./generated/contribution-trace.svg" alt="Animated trace connecting real GitHub contribution days"/>
+  <img width="100%" src="./generated/contribution-trace.svg" alt="Cyberpunk 2077 contribution trace with yellow activity cells, cyan animated path and magenta pulse based on real GitHub contribution days"/>
 
-  <sub>Both panels are generated from the GitHub contribution calendar by this repository's Actions workflow. Bar height and cell brightness reflect recorded daily activity; no sample calendar values are substituted.</sub>
+  <sub>Both panels are generated from the GitHub contribution calendar by this repository's Actions workflow. The trace uses Cyberpunk yellow activity cells, a cyan animated path, and a magenta endpoint pulse. Cell brightness and bar height reflect recorded activity; no sample calendar values are substituted.</sub>
 
 </div>
 
