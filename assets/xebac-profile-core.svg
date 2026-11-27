@@ -2,7 +2,7 @@
 <title id="title">XEBAC HAT cyberpunk security core</title>
 <desc id="desc">A futuristic neon security core with cyan and magenta orbital rings, circuit traces, and a dark cyberpunk terminal atmosphere.</desc>
 <defs>
-  <style>@keyframes xh-spin{to{transform:rotate(360deg)}}@keyframes xh-counter{to{transform:rotate(-360deg)}}@keyframes xh-pulse{0%,100%{opacity:.72;transform:scale(.97)}50%{opacity:1;transform:scale(1.04)}}.orbit-spin,.orbit-counter,.orbit-dash,.core-pulse{transform-box:fill-box;transform-origin:center}.orbit-spin{animation:xh-spin 34s linear infinite}.orbit-counter{animation:xh-counter 27s linear infinite}.orbit-dash{animation:xh-spin 48s linear infinite}.core-pulse{animation:xh-pulse 5s ease-in-out infinite}@media(prefers-reduced-motion:reduce){.orbit-spin,.orbit-counter,.orbit-dash,.core-pulse{animation:none!important}}</style>
+  <style>@keyframes xh-spin{to{transform:rotate(360deg)}}@keyframes xh-counter{to{transform:rotate(-360deg)}}@keyframes xh-pulse{0%,100%{opacity:.72;transform:scale(.97)}50%{opacity:1;transform:scale(1.04)}}.orbit-spin,.orbit-counter,.orbit-dash,.core-pulse{transform-box:fill-box;transform-origin:center}.orbit-spin{animation:xh-spin 18s linear infinite}.orbit-counter{animation:xh-counter 23s linear infinite}.orbit-dash{animation:xh-spin 31s linear infinite}.core-pulse{animation:xh-pulse 5s ease-in-out infinite}@media(prefers-reduced-motion:reduce){.orbit-spin,.orbit-counter,.orbit-dash,.core-pulse{animation:none!important}}</style>
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#070B18"/><stop offset=".55" stop-color="#10132B"/><stop offset="1" stop-color="#250C2B"/></linearGradient>
   <linearGradient id="neon" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#00F5FF"/><stop offset=".5" stop-color="#8B5CF6"/><stop offset="1" stop-color="#FF3CAC"/></linearGradient>
   <radialGradient id="core"><stop stop-color="#DDFBFF" stop-opacity=".9"/><stop offset=".18" stop-color="#00F5FF" stop-opacity=".52"/><stop offset=".58" stop-color="#8B5CF6" stop-opacity=".16"/><stop offset="1" stop-color="#0B1020" stop-opacity="0"/></radialGradient>
@@ -25,6 +25,9 @@
  <g class="orbit-spin"><ellipse rx="172" ry="67" stroke="#00F5FF" stroke-width="2" transform="rotate(-22)"/></g>
  <g class="orbit-counter"><ellipse rx="172" ry="67" stroke="#FF3CAC" stroke-width="2" transform="rotate(56)" opacity=".8"/></g>
  <g class="orbit-dash"><ellipse rx="132" ry="132" stroke="#8B5CF6" stroke-width="1.5" stroke-dasharray="8 10"/></g>
+ <g class="orbit-spin" opacity=".65"><ellipse rx="198" ry="48" stroke="#C8F9FF" stroke-width="1.2" stroke-dasharray="2 9" transform="rotate(28)"/></g>
+ <g class="orbit-counter" opacity=".55"><ellipse rx="148" ry="118" stroke="#FF3CAC" stroke-width="1" stroke-dasharray="5 12" transform="rotate(-34)"/></g>
+ <g class="orbit-spin"><circle cx="172" cy="0" r="5" fill="#E8FDFF"/><circle cx="-172" cy="0" r="3.5" fill="#FF3CAC"/></g>
  <ellipse rx="105" ry="105" stroke="#00F5FF" stroke-opacity=".6" stroke-width="1"/>
  <circle class="core-pulse" r="88" fill="url(#core)" stroke="#00F5FF" stroke-opacity=".85" stroke-width="2"/>
  <circle r="58" stroke="#FF3CAC" stroke-opacity=".8" stroke-width="1.5" stroke-dasharray="3 8"/>
