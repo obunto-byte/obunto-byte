@@ -1,7 +1,7 @@
 <!-- XEBAC HAT | Cyberpunk security engineering profile -->
 <div align="center">
   <a href="https://github.com/obunto-byte">
-    <img width="100%" src="./assets/xebac-profile-core.svg" alt="XEBAC HAT — neon cyberpunk security core" />
+    <img width="100%" src="./assets/xebac-profile-core.svg" alt="XEBAC HAT — animated neon cyberpunk security core with rotating orbital rings" />
   </a>
 
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=17&pause=1000&color=00F5FF&center=true&vCenter=true&width=760&lines=Defensive+Security+%2F+Python+Automation;Web+%26+API+Security+Research;Build+securely.+Test+responsibly.+Document+clearly." alt="Defensive security, Python automation and web security research" />
