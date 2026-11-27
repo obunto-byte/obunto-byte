@@ -41,7 +41,7 @@ I work primarily with Python and backend tooling, and I enjoy turning security c
 
 <div align="center">
 
-  <img width="100%" src="./assets/xebac-research-map.svg" alt="XEBAC HAT cyberpunk research map — AI security, offensive security, security engineering, and cloud governance"/>
+  <img width="100%" src="./assets/xebac-research-intelligence.svg" alt="XEBAC HAT cyberpunk research intelligence — four connected domains with neon cyan and magenta cards"/>
 
 </div>
 
