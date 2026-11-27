@@ -28,11 +28,11 @@ I focus on building understandable software, documenting limitations honestly, a
 
 > **Build securely. Verify carefully. Share responsibly.**
 
-## Contribution activity
+## 100 contributions in the last year
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/obunto-byte/obunto-byte/output/github-contribution-grid-snake.svg" alt="Animated GitHub contribution graph snake" width="100%" />
-  <sub>Automatically refreshed daily by GitHub Actions · XEBAC HAT crimson / cyan theme</sub>
+  <img src="https://raw.githubusercontent.com/obunto-byte/obunto-byte/output/github-contribution-grid-snake.svg" alt="XEBAC HAT animated GitHub contribution snake" width="100%" />
+  <sub>CYBERPUNK CONTRIBUTION TRACKER · AUTO-UPDATED DAILY</sub>
 </div>
 
 ## Featured projects
