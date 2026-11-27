@@ -97,7 +97,7 @@ def make_skyline(calendar, username):
 
 
 def make_contribution_topography(calendar, username):
-    """Render authentic daily GitHub counts as a compact isometric contribution field."""
+    """Render the real GitHub contribution calendar in XEBAC HAT neon cyberpunk styling."""
     weeks = calendar.get("weeks") or []
     entries = [(wi, di, day) for wi, week in enumerate(weeks)
                for di, day in enumerate(week.get("contributionDays") or [])]
@@ -108,36 +108,66 @@ def make_contribution_topography(calendar, username):
         return (round(x, 2), round(y, 2))
 
     tiles, towers = [], []
+    tile_idle = "#111A29"
+    tile_active = "#14263B"
+    left_colors = ["#12384E", "#25365E", "#422B62", "#5B285C"]
+    right_colors = ["#17617A", "#4A4C91", "#84458E", "#A23B7A"]
+    top_colors = ["#00E5FF", "#4F8DFF", "#B45CFF", "#FF35C8"]
+
     for wi, di, day in entries:
         count = int(day.get("contributionCount") or 0)
         x = 62 + wi * 15.2 - di * 7.35
         y = 119 + wi * 0.24 + di * 10.05
         p1, p2 = pt(x, y), pt(x + 13.2, y + 0.25)
         p3, p4 = pt(x + 6.6, y + 9.35), pt(x - 6.6, y + 9.10)
-        tiles.append(poly([p1, p2, p3, p4], "#24121A" if count else "#171B21", .96))
+        tiles.append(poly([p1, p2, p3, p4], tile_active if count else tile_idle, .98))
         if not count:
             continue
         height = 8 + math.log2(count + 1) * 11.5
         a1, a2, a3, a4 = [(px, py - height) for px, py in (p1, p2, p3, p4)]
-        # Three visible faces give each real contribution day an isometric column.
-        towers.append(poly([a4, a3, p3, p4], "#591528", .98))
-        towers.append(poly([a2, a3, p3, p2], "#941D39", .98))
         level = 1 if count == 1 else min(4, 1 + int(4 * count / max(1, maximum)))
-        top_colors = ["#7F1D35", "#B4233D", "#E11D48", "#FF526B"]
-        towers.append(poly([a1, a2, a3, a4], top_colors[level - 1], 1))
+        idx = level - 1
+        towers.append(poly([a4, a3, p3, p4], left_colors[idx], .99))
+        towers.append(poly([a2, a3, p3, p2], right_colors[idx], .99))
+        towers.append(poly([a1, a2, a3, a4], top_colors[idx], 1))
 
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="960" height="322" viewBox="0 0 960 322" role="img" aria-labelledby="title desc">
 <title id="title">{esc(username)} contribution topography</title>
 <desc id="desc">{total:,} real GitHub contributions in the calendar window. Each raised isometric column represents a day with contributions; height is logarithmically scaled from the GitHub contribution count.</desc>
-<rect x="0.5" y="0.5" width="959" height="321" rx="15" fill="#080A0D" stroke="#343B45"/>
-<text x="24" y="29" fill="#DC143C" font-family="monospace" font-size="11" font-weight="700" letter-spacing="1.8">CONTRIBUTION TOPOGRAPHY / 3D</text>
-<text x="24" y="55" fill="#E5E7EB" font-family="monospace" font-size="18" font-weight="700">{total:,} contributions</text>
-<text x="936" y="29" text-anchor="end" fill="#9CA3AF" font-family="monospace" font-size="9" font-weight="700">GITHUB CALENDAR / 1 YEAR</text>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#080D1A"/>
+    <stop offset=".55" stop-color="#0B0B1B"/>
+    <stop offset="1" stop-color="#12091B"/>
+  </linearGradient>
+  <linearGradient id="neon" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#00E5FF"/>
+    <stop offset=".48" stop-color="#8B5CF6"/>
+    <stop offset="1" stop-color="#FF35C8"/>
+  </linearGradient>
+  <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+    <path d="M24 0H0V24" fill="none" stroke="#6686B5" stroke-opacity=".09" stroke-width=".7"/>
+  </pattern>
+  <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+    <feGaussianBlur stdDeviation="2.2" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<rect x=".75" y=".75" width="958.5" height="320.5" rx="15" fill="url(#bg)" stroke="url(#neon)" stroke-width="1.2"/>
+<rect x="2" y="2" width="956" height="318" rx="14" fill="url(#grid)"/>
+<path d="M0 13H960M0 18H960" stroke="url(#neon)" stroke-opacity=".48"/>
+<text x="24" y="29" fill="#00E5FF" font-family="monospace" font-size="11" font-weight="700" letter-spacing="1.8">CONTRIBUTION TOPOGRAPHY / 3D</text>
+<text x="24" y="55" fill="#F1F5F9" font-family="monospace" font-size="18" font-weight="700">{total:,} contributions</text>
+<text x="936" y="29" text-anchor="end" fill="#B6C5D8" font-family="monospace" font-size="9" font-weight="700">GITHUB CALENDAR / 1 YEAR</text>
+<circle cx="916" cy="50" r="3.5" fill="#FF35C8" filter="url(#glow)">
+  <animate attributeName="opacity" values=".25;1;.25" dur="3s" repeatCount="indefinite"/>
+</circle>
 <g>{''.join(tiles)}</g><g>{''.join(towers)}</g>
-<path d="M24 273H936" stroke="#303741" stroke-width="1"/>
-<text x="24" y="299" fill="#C3C7CE" font-family="monospace" font-size="9">DATE → / HEIGHT = LOG-SCALED CONTRIBUTION COUNT</text>
-<text x="936" y="299" text-anchor="end" fill="#C3C7CE" font-family="monospace" font-size="9">GENERATED FROM GITHUB GRAPHQL</text>
+<path d="M24 273H936" stroke="url(#neon)" stroke-opacity=".58" stroke-width="1"/>
+<text x="24" y="299" fill="#C5D2E0" font-family="monospace" font-size="9">DATE → / HEIGHT = LOG-SCALED CONTRIBUTION COUNT</text>
+<text x="936" y="299" text-anchor="end" fill="#D18BFF" font-family="monospace" font-size="9">GENERATED FROM GITHUB GRAPHQL</text>
 </svg>'''
+
 
 def make_contribution_trace(calendar, username):
     """Render the actual calendar cells and animate a path through active days."""
