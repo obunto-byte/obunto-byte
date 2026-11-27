@@ -7,6 +7,7 @@
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=17&pause=1000&color=00F5FF&center=true&vCenter=true&width=760&lines=Defensive+Security+%2F+Python+Automation;Web+%26+API+Security+Research;Build+securely.+Test+responsibly.+Document+clearly." alt="Defensive security, Python automation and web security research" />
 
   <p>
+    <a href="https://obunto-byte.github.io/"><img src="https://img.shields.io/badge/LIVE-PORTFOLIO-00F5FF?style=for-the-badge&logo=githubpages&logoColor=00F5FF&labelColor=0B1020" alt="Open live XEBAC HAT portfolio" /></a>
     <a href="https://github.com/obunto-byte?tab=repositories"><img src="https://img.shields.io/badge/EXPLORE-REPOSITORIES-00F5FF?style=for-the-badge&logo=github&logoColor=00F5FF&labelColor=0B1020" alt="Explore repositories" /></a>
     <a href="https://github.com/obunto-byte/obunto-byte"><img src="https://img.shields.io/badge/PROFILE-XEBAC_HAT-FF3CAC?style=for-the-badge&logo=github&logoColor=FF3CAC&labelColor=0B1020" alt="XEBAC HAT profile" /></a>
   </p>
