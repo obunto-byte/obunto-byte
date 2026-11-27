@@ -39,6 +39,12 @@ I work primarily with Python and backend tooling, and I enjoy turning security c
 | **Developer workflow** | Windows, Linux, VS Code, Git, GitHub |
 | **Responsible research** | Authorized environments, reproducible notes, privacy-aware telemetry |
 
+<div align="center">
+
+  <img width="100%" src="./assets/xebac-research-map.svg" alt="XEBAC HAT cyberpunk research map — AI security, offensive security, security engineering, and cloud governance"/>
+
+</div>
+
 > **Build securely. Verify carefully. Share responsibly.**
 
 ## 02 / Featured projects
